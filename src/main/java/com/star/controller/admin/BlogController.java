@@ -11,6 +11,7 @@ import com.star.queryvo.ShowBlog;
 import com.star.service.BlogService;
 import com.star.service.TypeService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -57,10 +58,10 @@ public class BlogController {
         return "admin/blogs-input";
     }
 
-    //博客新增
+    //博客新增,发布和保存都是走这个的
     @PostMapping("/blogs")
-    public String post(Blog blog, RedirectAttributes attributes, HttpSession session){
-        blog.setUser((User) session.getAttribute("user"));
+    public String post(@Valid Blog blog, RedirectAttributes attributes, HttpSession session){
+        blog.setUser( (User) session.getAttribute("user") );
         //设置blog的type
         blog.setType(typeService.getType(blog.getType().getId()));
         //设置blog中typeId属性

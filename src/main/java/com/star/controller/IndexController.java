@@ -23,10 +23,8 @@ import java.util.List;
 
 /**
  * @Description: 首页控制器
- * @Author: ONESTAR
- * @Date: Created in 13:59 2020/3/25
- * @QQ群: 530311074
- * @URL: https://onestar.newstar.net.cn/
+ * @Author: ye
+ * @Date: Created in 13:59 2021/8/1
  */
 @Controller
 public class IndexController {
@@ -43,13 +41,13 @@ public class IndexController {
     @Autowired
     private CommentService commentService;
 
-//    分页查询博客列表
+//    首页中的分页查询博客列表
     @GetMapping("/")
     public String index(Model model, @RequestParam(defaultValue = "1",value = "pageNum") Integer pageNum, RedirectAttributes attributes){
-        PageHelper.startPage(pageNum,10);
+        PageHelper.startPage(pageNum,5);
         List<FirstPageBlog> allFirstPageBlog = blogService.getAllFirstPageBlog();
+        //返回最新推荐的博客取出前4条
         List<RecommendBlog> recommendedBlog = blogService.getRecommendedBlog();
-
         PageInfo<FirstPageBlog> pageInfo = new PageInfo<>(allFirstPageBlog);
         model.addAttribute("pageInfo",pageInfo);
         model.addAttribute("recommendedBlogs", recommendedBlog);
@@ -70,7 +68,7 @@ public class IndexController {
         return "search";
     }
 
-//    跳转博客详情页面
+//   从首页跳转博客详情页面
     @GetMapping("/blog/{id}")
     public String blog(@PathVariable Long id, Model model) {
         DetailedBlog detailedBlog = blogService.getDetailedBlog(id);

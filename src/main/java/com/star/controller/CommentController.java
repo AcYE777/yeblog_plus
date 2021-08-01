@@ -20,10 +20,8 @@ import java.util.List;
 
 /**
  * @Description: 评论控制器
- * @Author: ONESTAR
- * @Date: Created in 17:16 2020/4/5
- * @QQ群: 530311074
- * @URL: https://onestar.newstar.net.cn/
+ * @Author: ye
+ * @Date: Created in 17:16 2021/8/1
  */
 @Controller
 public class CommentController {
@@ -34,6 +32,7 @@ public class CommentController {
     @Autowired
     private BlogService blogService;
 
+    //这个值来自于配置文件application.yml
     @Value("${comment.avatar}")
     private String avatar;
 
@@ -45,7 +44,7 @@ public class CommentController {
         return "blog :: commentList";
     }
 
-//    新增评论
+//    新增评论,此处修改过
     @PostMapping("/comments")
     public String post(Comment comment, HttpSession session,Model model) {
         Long blogId = comment.getBlogId();
@@ -57,8 +56,8 @@ public class CommentController {
             //设置头像
             comment.setAvatar(avatar);
         }
-
-        if (comment.getParentComment().getId() != null) {
+        Comment pt = comment.getParentComment();
+        if (pt != null && pt.getId() != null) {
             comment.setParentCommentId(comment.getParentComment().getId());
         }
         commentService.saveComment(comment);

@@ -3,14 +3,14 @@
 <mapper namespace="com.star.dao.CommentDao">
 
     <insert id="saveComment" parameterType="com.star.entity.Comment">
-        insert into myblog.t_comment (nickname,email,content,avatar,create_time,blog_id,parent_comment_id,admin_comment)
+        insert into t_comment (nickname,email,content,avatar,create_time,blog_id,parent_comment_id,admin_comment)
         values (#{nickname},#{email},#{content},#{avatar},#{createTime},#{blogId},#{parentCommentId},#{adminComment});
     </insert>
 
 
-    <select id="findByBlogIdParentIdNull" resultType="com.star.entity.Comment">
+    <select id="findByBlogIdParentIdNull" resultType="Comment">
         select *
-        from myblog.t_comment c
+        from t_comment c
         where c.blog_id = #{blogId} and c.parent_comment_id = #{blogParentId}
         order by c.create_time desc
     </select>
@@ -18,7 +18,7 @@
 <!--查询一级子评论-->
     <select id="findByBlogIdParentIdNotNull" resultType="com.star.entity.Comment">
         select *
-        from myblog.t_comment c
+        from t_comment c
         where c.blog_id = #{blogId} and c.parent_comment_id = #{id}
         order by c.create_time desc
     </select>
@@ -26,7 +26,7 @@
     <!--查询二级子评论-->
     <select id="findByBlogIdAndReplayId" resultType="com.star.entity.Comment">
         select *
-        from myblog.t_comment c
+        from t_comment c
         where c.blog_id = #{blogId} and c.parent_comment_id = #{childId}
         order by c.create_time desc
     </select>

@@ -32,14 +32,17 @@ public class CommentServiceImpl implements CommentService {
 
     @Override
     public List<Comment> listCommentByBlogId(Long blogId) {
-        //查询出父节点
+        //查询出父节点, 注意parent_comment值为-1的算是父节点
         List<Comment> comments = commentDao.findByBlogIdParentIdNull(blogId, Long.parseLong("-1"));
+        //遍历父节点
         for(Comment comment : comments){
-            Long id = comment.getId();
-            String parentNickname1 = comment.getNickname();
+            Long id = comment.getId(); //获取父节点的id
+            String parentNickname1 = comment.getNickname();//获取父节点的昵称
+            //查询出该父亲的所有孩子,一对多的关系
             List<Comment> childComments = commentDao.findByBlogIdParentIdNotNull(blogId,id);
 //            查询出子评论
             combineChildren(blogId, childComments, parentNickname1);
+            //这个tempReplys存放当前的子回复
             comment.setReplyComments(tempReplys);
             tempReplys = new ArrayList<>();
         }
@@ -52,6 +55,7 @@ public class CommentServiceImpl implements CommentService {
 //                循环找出子评论的id
             for(Comment childComment : childComments){
                 String parentNickname = childComment.getNickname();
+                //这里是由于Comment里面有一个parentNickname，需要赋值
                 childComment.setParentNickname(parentNickname1);
                 tempReplys.add(childComment);
                 Long childId = childComment.getId();
@@ -81,7 +85,7 @@ public class CommentServiceImpl implements CommentService {
     public int saveComment(Comment comment) {
         comment.setCreateTime(new Date());
         int comments = commentDao.saveComment(comment);
-//        文章评论计数
+//        文章评论计数,在查询id的同时进行更新t_blogs表中的comment_count字段
         blogDao.getCommentCountById(comment.getBlogId());
         return comments;
     }

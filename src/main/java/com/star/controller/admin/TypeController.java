@@ -34,9 +34,9 @@ public class TypeController {
     public String list(Model model,@RequestParam(defaultValue = "1",value = "pageNum") Integer pageNum){
         //按照排序字段 倒序 排序
         String orderBy = "id desc";
-        PageHelper.startPage(pageNum,10,orderBy);
+        PageHelper.startPage(pageNum,5,orderBy);
         List<Type> list = typeService.getAllType();
-        PageInfo<Type> pageInfo = new PageInfo<Type>(list);
+        PageInfo<Type> pageInfo = new PageInfo<>(list);
         model.addAttribute("pageInfo",pageInfo);
         return "admin/types";
     }
@@ -44,17 +44,18 @@ public class TypeController {
 //    返回新增分类页面
     @GetMapping("/types/input")
     public String input(Model model){
+        //先创建一个对象再跳转到新增页面
         model.addAttribute("type", new Type());
         return "admin/types-input";
     }
 
-//  新增分类
+//  注意请求的类型是get还是post 新增分类
     @PostMapping("/types")
     public String post(@Valid Type type, RedirectAttributes attributes) {
         Type type1 = typeService.getTypeByName(type.getName());
         if (type1 != null) {
-            attributes.addFlashAttribute("message", "不能添加重复的分类");
-            return "redirect:/admin/types/input";
+            attributes.addFlashAttribute("message", "已存在该分类不能新增");
+            return "redirect:/admin/types/input";//先跳转到这个路径，这个路径再跳转页面
         }
         int t = typeService.saveType(type);
         if (t == 0) {
@@ -72,13 +73,13 @@ public class TypeController {
         return "admin/types-input";
     }
 
-//    编辑修改分类
+//    在修改页面中提交表单后的---编辑修改分类
     @PostMapping("/types/{id}")
     public String editPost(@Valid Type type, RedirectAttributes attributes) {
         Type type1 = typeService.getTypeByName(type.getName());
         if (type1 != null) {
-            attributes.addFlashAttribute("message", "不能添加重复的分类");
-            return "redirect:/admin/types/input";
+            attributes.addFlashAttribute("message", "已存在该分类");
+            return "redirect:/admin/types/input";//这个是现跳转到这个路径，然后有这个路径在开始跳转到types-input页面
         }
         int t = typeService.updateType(type);
         if (t == 0 ) {
