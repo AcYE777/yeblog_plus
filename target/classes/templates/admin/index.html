@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,6 +15,7 @@
   <div class="ui container">
     <div class="ui inverted secondary stackable menu">
       <h2 class="ui olive header item" style="font-family: STSong">管理后台</h2>
+      <!--点击文章管理是先走后台进行分页然后才讲数据展示出来的-->
       <a href="#" th:href="@{/admin/blogs}" class="m-item item m-mobile-hide"><i class="home icon"></i>文章管理</a>
       <a href="#" th:href="@{/admin/types}" class="m-item item m-mobile-hide"><i class="clone outline icon"></i>分类管理</a>
       <a href="#" th:href="@{/admin/friendlinks}" class="m-item item m-mobile-hide"><i class="pencil alternate icon"></i>友链管理</a>
@@ -46,10 +47,9 @@
   <div  class="m-padded-tb-massivex">
     <div class="ui container">
       <div class="ui success large  message">
-        <p align="center">念念不忘，必有回响</p>
+        <p align="center">你只管努力，剩下的交给时间</p>
       </div>
-
-      <img src="/static/images/backimg.jpg" th:src="@{/images/backimg.jpg}" alt="" class="ui rounded bordered fluid image">
+          <img src="/static/images/backimg.jpg" th:src="@{/images/backimg.jpg}" alt="" class="ui rounded bordered fluid image">
     </div>
   </div>
 
@@ -66,8 +66,8 @@
         <!--</div>-->
         <!--</div>-->
         <div class="ui inverted link list">
-          <div href="#" class="m-text-thin">Email：onestarlr@hotmail.com</div>
-          <div href="#" class="m-text-thin">QQ：316392836</div>
+          <div href="#" class="m-text-thin">Email：2900801226@qq.com</div>
+          <div href="#" class="m-text-thin">QQ：2900801226</div>
         </div>
       </div>
 
@@ -75,8 +75,8 @@
         <div class="ui inverted link list">
           <div class="item">
             <!--微信二维码-->
-            <div style="font-size: large;font-weight: bold" class="ui inverted m-text-thin m-text-spaced " >关注公众号</div>
-            <img src="../../static/images/oneStar.jpg" th:src="@{/images/oneStar.jpg}"  class="ui m-margin-top rounded image" alt="" style="width: 110px">
+            <div style="font-size: large;font-weight: bold" class="ui inverted m-text-thin m-text-spaced " >关注我</div>
+            <img src="../../static/images/myCard.jpg" th:src="@{/images/myCard.jpg}"  class="ui m-margin-top rounded image" alt="" style="width: 110px">
           </div>
         </div>
       </div>
@@ -85,14 +85,15 @@
         <div class="ui inverted link list">
           <div class="item">
             <!--微信二维码-->
-            <div style="font-size: large;font-weight: bold" class="ui inverted m-text-thin m-text-spaced " >问题交流（QQ群）</div>
-            <img src="../../static/images/QQ-question.jpg" th:src="@{/images/QQ-question.jpg}"  class="ui m-margin-top rounded image" alt="" style="width: 110px">
+            <div style="font-size: large;font-weight: bold" class="ui inverted m-text-thin m-text-spaced " >问题交流</div>
+            <img src="../../static/images/myCard.jpg" th:src="@{/images/myCard.jpg}"  class="ui m-margin-top rounded image" alt="" style="width: 110px">
           </div>
         </div>
       </div>
+
       <!--博客运行时间统计-->
       <div class="four wide column">
-        <div style="font-size: large;font-weight: bold" class="ui inverted  m-text-thin m-text-spaced m-margin-top">客栈信息</div>
+        <div style="font-size: large;font-weight: bold" class="ui inverted  m-text-thin m-text-spaced m-margin-top">博客信息</div>
         <!--<p id="htmer_time" class="item m-text-thin"></p>-->
         <div id="blog-message">
           <div class="ui inverted link list" style="align-content: center;margin-top: 10px" th:fragment="blogMessage">
@@ -113,8 +114,7 @@
       </div>
     </div>
     <div class="ui inverted section divider"></div>
-    <div style="color: #F08047;margin-top: -18px" class="ui inverted m-text-thin m-text-spaced">我的客栈已营业：<span id="htmer_time" class="item m-text-thin"></span> (*๓´╰╯`๓)</div>
-    <a rel="nofollow" href="http://www.beian.miit.gov.cn" target="_blank">赣ICP备20004408号-1</a>
+    <div style="color: #F08047;margin-top: -18px" class="ui inverted m-text-thin m-text-spaced">我的博客已营业：<span id="htmer_time" class="item m-text-thin"></span> (*๓´╰╯`๓)</div>
   </div>
   </div>
 
@@ -158,7 +158,7 @@
       }
       function setTime() {
           /*此处为网站的创建时间*/
-          var create_time = Math.round(new Date(Date.UTC(2020, 01, 25, 15, 15, 15)).getTime() / 1000);
+          var create_time = Math.round(new Date(Date.UTC(2021, 06, 31, 15, 00, 00)).getTime() / 1000);
           var timestamp = Math.round((new Date().getTime() + 8 * 60 * 60 * 1000) / 1000);
           currentTime = secondToDate((timestamp - create_time));
           currentTimeHtml = currentTime[0] + '年' + currentTime[1] + '天'

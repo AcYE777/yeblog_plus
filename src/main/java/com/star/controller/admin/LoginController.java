@@ -14,10 +14,8 @@ import javax.servlet.http.HttpSession;
 
 /**
  * @Description: 用户登录控制器
- * @Author: ONESTAR
- * @Date: Created in 9:54 2020/3/27
- * @QQ群: 530311074
- * @URL: https://onestar.newstar.net.cn/
+ * @Author: ye
+ * @Date: Created in 9:54 2021/7/31
  */
 @Controller
 @RequestMapping("/admin")
@@ -27,11 +25,9 @@ public class LoginController {
     private UserService userService;
 
     /**
-     * @Description: 跳转登录页面
-     * @Auther: ONESTAR
-     * @Date: 9:57 2020/3/27
-     * @Param:
-     * @Return: 返回登录页面
+     * @Description: 跳转到登录页
+     * @Author: ye
+     * @Date: Created in 9:54 2021/7/31
      */
     @GetMapping
     public String loginPage(){
@@ -40,8 +36,8 @@ public class LoginController {
 
     /**
      * @Description: 登录校验
-     * @Auther: ONESTAR
-     * @Date: 10:04 2020/3/27 
+     * @Auther: ye
+     * @Date: 10:04 2021/7/31
      * @Param: username:用户名
      * @Param: password:密码
      * @Param: session:session域
@@ -67,8 +63,8 @@ public class LoginController {
 
     /**
      * @Description: 注销
-     * @Auther: ONESTAR
-     * @Date: 10:15 2020/3/27
+     * @Auther: ye
+     * @Date: 10:15 2021/7/31
      * @Param: session:session域
      * @Return: 返回登录页面
      */

@@ -41,9 +41,9 @@ public class BlogController {
     public String blogs(Model model, @RequestParam(defaultValue = "1",value = "pageNum") Integer pageNum){
         //按照排序字段 倒序 排序
         String orderBy = "update_time desc";
-        PageHelper.startPage(pageNum,10,orderBy);
+        PageHelper.startPage(pageNum,5,orderBy);
         List<BlogQuery> list = blogService.getAllBlog();
-        PageInfo<BlogQuery> pageInfo = new PageInfo<BlogQuery>(list);
+        PageInfo<BlogQuery> pageInfo = new PageInfo<>(list);
         model.addAttribute("types",typeService.getAllType());
         model.addAttribute("pageInfo",pageInfo);
         return "admin/blogs";
@@ -57,7 +57,7 @@ public class BlogController {
         return "admin/blogs-input";
     }
 
-//    博客新增
+    //博客新增
     @PostMapping("/blogs")
     public String post(Blog blog, RedirectAttributes attributes, HttpSession session){
         blog.setUser((User) session.getAttribute("user"));
@@ -77,7 +77,7 @@ public class BlogController {
         return "redirect:/admin/blogs";
     }
 
-//    删除文章
+//     删除文章
     @GetMapping("/blogs/{id}/delete")
     public String delete(@PathVariable Long id, RedirectAttributes attributes) {
         blogService.deleteBlog(id);
@@ -88,18 +88,18 @@ public class BlogController {
 //    跳转编辑修改文章
     @GetMapping("/blogs/{id}/input")
     public String editInput(@PathVariable Long id, Model model) {
-        ShowBlog blogById = blogService.getBlogById(id);
+        ShowBlog blog = blogService.getBlogById(id);
         List<Type> allType = typeService.getAllType();
-        model.addAttribute("blog", blogById);
+        model.addAttribute("blog", blog);
         model.addAttribute("types", allType);
         return "admin/blogs-input";
     }
 
 //    编辑修改文章
     @PostMapping("/blogs/{id}")
-    public String editPost(@Valid ShowBlog showBlog, RedirectAttributes attributes) {
-        int b = blogService.updateBlog(showBlog);
-        if(b ==0){
+    public String editPost(ShowBlog showBlog, RedirectAttributes attributes) {
+        int count = blogService.updateBlog(showBlog);
+        if(count == 0){
             attributes.addFlashAttribute("message", "修改失败");
         }else {
             attributes.addFlashAttribute("message", "修改成功");
@@ -108,14 +108,24 @@ public class BlogController {
     }
 
 //    搜索博客
-    @PostMapping("/blogs/search")
+    @RequestMapping(value = "/blogs/search",method = RequestMethod.POST)
     public String search(SearchBlog searchBlog, Model model,
                          @RequestParam(defaultValue = "1",value = "pageNum") Integer pageNum) {
+        //注意使用分页插件顺序不能错，一定是先定义规则然后再进行设置页面的大小
+        System.out.println(searchBlog);
+        String orderBy = "update_time desc";
+        PageHelper.startPage(pageNum,5,orderBy);
         List<BlogQuery> blogBySearch = blogService.getBlogBySearch(searchBlog);
-        PageHelper.startPage(pageNum, 10);
         PageInfo<BlogQuery> pageInfo = new PageInfo<>(blogBySearch);
         model.addAttribute("pageInfo", pageInfo);
-        return "admin/blogs :: blogList";
+        if (searchBlog.getTypeId() == null && searchBlog.getTitle() == "") {
+            model.addAttribute("hasSearch",false);
+        } else {
+            model.addAttribute("hasSearch",true);
+        }
+        //可以只对blogs.html页面中的blogList部分进行刷新,需要在blogs.html页面配置th:fragment
+//        return "admin/blogs::blogPart";
+        return "admin/blogs::blogPart";
     }
 }
 

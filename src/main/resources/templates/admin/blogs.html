@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -56,7 +56,6 @@
   <div  class="">
     <div class="ui container">
       <div  class="ui secondary segment form">
-        <input type="hidden" name="page" >
         <div class="inline fields">
           <div class="field">
             <input type="text" name="title" placeholder="标题">
@@ -68,26 +67,21 @@
                 <i class="dropdown icon"></i>
                 <div class="default text">分类</div>
                 <div class="menu">
-                  <div th:each="type : ${types}" class="item" data-value="1" th:data-value="${type.id}" th:text="${type.name}">我的故事</div>
+                    <div th:each="type : ${types}" class="item" data-value="1" th:data-value="${type.id}" th:text="${type.name}">我的故事</div>
                 </div>
               </div>
-              <button id="clear-btn" class="ui compact button">clear</button>
+              <button id="clear-btn" class="ui compact button">清除</button>
             </div>
 
           </div>
-          <!--<div class="field">-->
-            <!--<div class="ui checkbox">-->
-              <!--<input type="checkbox" id="recommend" name="recommend">-->
-              <!--<label for="recommend">推荐</label>-->
-            <!--</div>-->
-          <!--</div>-->
           <div class="field">
-            <button  type="button" id="search-btn" class="ui mini teal basic button"><i class="search icon"></i>搜索</button>
+            <button type="button" id="search-btn" class="ui mini teal basic button"><i class="search icon"></i>搜索</button>
           </div>
         </div>
       </div>
-      <div id="table-container">
-        <table th:fragment="blogList" class="ui compact teal table">
+
+      <div id="table-container" >
+        <table class="ui compact teal table"  th:fragment="blogPart">
           <thead>
           <tr align="center">
             <th>ID</th>
@@ -101,6 +95,7 @@
           </thead>
           <tbody>
           <tr align="center" th:each="blog,iterStat : ${pageInfo.list}">
+            <!--固定语法iterStat是list集合中迭代出来的下标从1开始，若iterStat.index则是从1开-->
             <td th:text="${iterStat.count}">1</td>
             <td th:text="${blog.title}">大圣，此去欲何?</td>
             <td th:text="${blog.getType().name}">我的故事</td>
@@ -108,9 +103,9 @@
             <td th:text="${blog.published} ? '发布':'草稿'">草稿</td>
             <td th:text="${#dates.format(blog.updateTime,'yyyy-MM-dd HH:mm')}">2020-01-02 05:20</td>
             <td>
-              <!--th:href="@{/admin/types/{id}/input(id=${type.id})}"-->
+              <!--input的delete后面的括号其实是给前面的{id}复制的，要不然就得拼串-->
               <a href="#" th:href="@{/admin/blogs/{id}/input(id=${blog.id})}" class="ui mini teal basic button">编辑</a>
-              <a href="#" th:href="@{/admin/blogs/{id}/delete(id=${blog.id})}" onclick="return confirm('确定要删除该文章吗？三思啊! 删了可就没了！')" class="ui mini red basic button">删除</a>
+              <a href="#" th:href="@{/admin/blogs/{id}/delete(id=${blog.id})}" onclick="return confirm('确定要删除该文章吗？')" class="ui mini red basic button">删除</a>
             </td>
           </tr>
           </tbody>
@@ -119,15 +114,21 @@
             <th colspan="7">
               <div class="ui inverted divided stackable grid">
                 <div class="three wide column" align="center">
-                  <a class="item" th:href="@{/admin/blogs(pageNum=${pageInfo.hasPreviousPage}?${pageInfo.prePage}:1)}" th:unless="${pageInfo.isFirstPage}">上一页</a>
+                  <a class="item" th:href="@{/admin/blogs(pageNum = ${pageInfo.hasPreviousPage}? ${pageInfo.prePage} : 1)}"
+                     th:if="${!pageInfo.isFirstPage && (hasSearch == false || hasSearch == null)}">上一页</a>
+                  <a class="item" style="cursor:pointer" th:onclick="loaddata([[${pageInfo.prePage}]])" th:if="${(!pageInfo.isFirstPage) && (hasSearch == true)}">上一页</a>
                 </div>
 
                 <div class="ten wide column" align="center">
+                  <!--pageNum是当前第几页,pages是总共几页,-->
                   <p>第 <span th:text="${pageInfo.pageNum}"></span> 页，共 <span th:text="${pageInfo.pages}"></span> 页，有 <span th:text="${pageInfo.total}"></span> 篇文章</p>
                 </div>
 
                 <div class="three wide column" align="center">
-                  <a class="item" th:href="@{/admin/blogs(pageNum=${pageInfo.hasNextPage}?${pageInfo.nextPage}:${pageInfo.pages})}" th:unless="${pageInfo.isLastPage}">下一页</a>
+                  <a class="item"
+                     th:href="@{/admin/blogs(pageNum = ${pageInfo.hasNextPage} ? ${pageInfo.nextPage} : ${pageInfo.pages})}"
+                     th:if="${(!pageInfo.isLastPage) && (hasSearch == false || hasSearch == null)}">下一页</a>
+                  <a class="item" style="cursor:pointer" th:onclick="loaddata([[${pageInfo.nextPage}]])" th:if="${(!pageInfo.isLastPage) && (hasSearch == true)}">下一页</a>
                 </div>
               </div>
               <div align="center">
@@ -168,14 +169,10 @@
       <div class="ui inverted divided stackable grid">
         <div class="four wide column">
           <div style="font-size: large;font-weight: bold" class="ui inverted m-text-thin m-text-spaced m-margin-top-max" >联系我</div>
-          <!--<div id="newblog-container">-->
-          <!--<div class="ui inverted link list" th:fragment="newblogList">-->
-          <!--<a href="#" th:href="@{/blog/{id}(id=${blog.id})}" target="_blank" class="item m-text-thin" th:each="blog : ${newblogs}" th:text="${blog.title}">最新文章</a>-->
-          <!--</div>-->
-          <!--</div>-->
+
           <div class="ui inverted link list">
-            <div href="#" class="m-text-thin">Email：onestarlr@hotmail.com</div>
-            <div href="#" class="m-text-thin">QQ：316392836</div>
+            <div href="#" class="m-text-thin">Email：2900801226@qq.com</div>
+            <div href="#" class="m-text-thin">QQ：2900801226</div>
           </div>
         </div>
 
@@ -183,8 +180,8 @@
           <div class="ui inverted link list">
             <div class="item">
               <!--微信二维码-->
-              <div style="font-size: large;font-weight: bold" class="ui inverted m-text-thin m-text-spaced " >关注公众号</div>
-              <img src="../../static/images/oneStar.jpg" th:src="@{/images/oneStar.jpg}"  class="ui m-margin-top rounded image" alt="" style="width: 110px">
+              <div style="font-size: large;font-weight: bold" class="ui inverted m-text-thin m-text-spaced " >关注我</div>
+              <img src="../../static/images/myCard.jpg" th:src="@{/images/myCard.jpg}"  class="ui m-margin-top rounded image" alt="" style="width: 110px">
             </div>
           </div>
         </div>
@@ -193,14 +190,14 @@
           <div class="ui inverted link list">
             <div class="item">
               <!--微信二维码-->
-              <div style="font-size: large;font-weight: bold" class="ui inverted m-text-thin m-text-spaced " >问题交流（QQ群）</div>
-              <img src="../../static/images/QQ-question.jpg" th:src="@{/images/QQ-question.jpg}"  class="ui m-margin-top rounded image" alt="" style="width: 110px">
+              <div style="font-size: large;font-weight: bold" class="ui inverted m-text-thin m-text-spaced " >问题交流</div>
+              <img src="../../static/images/myCard.jpg" th:src="@{/images/myCard.jpg}"  class="ui m-margin-top rounded image" alt="" style="width: 110px">
             </div>
           </div>
         </div>
         <!--博客运行时间统计-->
         <div class="four wide column">
-          <div style="font-size: large;font-weight: bold" class="ui inverted  m-text-thin m-text-spaced m-margin-top">客栈信息</div>
+          <div style="font-size: large;font-weight: bold" class="ui inverted  m-text-thin m-text-spaced m-margin-top">博客信息</div>
           <!--<p id="htmer_time" class="item m-text-thin"></p>-->
           <div id="blog-message">
             <div class="ui inverted link list" style="align-content: center;margin-top: 10px" th:fragment="blogMessage">
@@ -221,8 +218,7 @@
         </div>
       </div>
       <div class="ui inverted section divider"></div>
-      <div style="color: #F08047;margin-top: -18px" class="ui inverted m-text-thin m-text-spaced">我的客栈已营业：<span id="htmer_time" class="item m-text-thin"></span> (*๓´╰╯`๓)</div>
-      <a rel="nofollow" href="http://www.beian.miit.gov.cn" target="_blank">赣ICP备20004408号-1</a>
+      <div style="color: #F08047;margin-top: -18px" class="ui inverted m-text-thin m-text-spaced">我的博客已营业：<span id="htmer_time" class="item m-text-thin"></span> (*๓´╰╯`๓)</div>
     </div>
     </div>
 
@@ -265,7 +261,7 @@
       }
       function setTime() {
           /*此处为网站的创建时间*/
-          var create_time = Math.round(new Date(Date.UTC(2020, 01, 25, 15, 15, 15)).getTime() / 1000);
+          var create_time = Math.round(new Date(Date.UTC(2021, 06, 31, 15, 00, 00)).getTime() / 1000);
           var timestamp = Math.round((new Date().getTime() + 8 * 60 * 60 * 1000) / 1000);
           currentTime = secondToDate((timestamp - create_time));
           currentTimeHtml = currentTime[0] + '年' + currentTime[1] + '天'
@@ -302,20 +298,17 @@
       })
     ;
 
-    function page(obj) {
-      $("[name='page']").val($(obj).data("page"));
-      loaddata();
-    }
-
     $("#search-btn").click(function () {
-      $("[name='page']").val(0);
+      // $("[name='page']").val(0);
       loaddata();
     });
-    function loaddata() {
-      $("#table-container").load(/*[[@{/admin/blogs/search}]]*/"/admin/blogs/search",{
+
+    function loaddata(page) {
+      $("#table-container").load(
+        "/admin/blogs/search",{
         title : $("[name='title']").val(),
         typeId : $("[name='typeId']").val(),
-        page : $("[name='page']").val()
+        pageNum : page//加这个页号后台才能拿到
       });
     }
 

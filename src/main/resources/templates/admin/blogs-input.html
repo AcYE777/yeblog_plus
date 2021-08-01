@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -52,9 +52,12 @@
   <!--中间内容-->
   <div  class="">
     <div class="ui container">
+      <!--由于新增和编辑都是相同的页面，所以要判断博客信息的id是否为空，若不为空则进入编辑
+        若为空则说明需要新建，th:object=${blog}这样写后就可以直接*{}用里面的属性即可
+      -->
       <form id="blog-form" action="#" th:object="${blog}" th:action="*{id}==null ? @{/admin/blogs} : @{/admin/blogs/{id}(id=*{id})}" method="post" class="ui form">
-        <input type="hidden" name="published" th:value="*{published}">
         <input type="hidden" name="id" th:value="*{id}">
+        <input type="hidden" name="published" th:value="*{published}">
 
         <div class="required field">
           <div class="ui left labeled input">
@@ -112,7 +115,7 @@
           <div class="field">
             <div class="ui checkbox">
               <input type="checkbox" id="recommend" name="recommend" checked th:checked="*{recommend}" class="hidden">
-              <label for="recommend">推荐</label>
+              <label for="recommend" >推荐</label>
             </div>
           </div>
           <div class="field">

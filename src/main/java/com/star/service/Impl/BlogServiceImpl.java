@@ -47,6 +47,7 @@ public class BlogServiceImpl implements BlogService {
 
     @Override
     public int updateBlog(ShowBlog showBlog) {
+        //设置日期，由于前端没有传来更新日期
         showBlog.setUpdateTime(new Date());
         return blogDao.updateBlog(showBlog);
     }

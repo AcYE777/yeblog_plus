@@ -40,13 +40,13 @@
 
     <!--查询文章管理列表-->
     <select id="getAllBlogQuery" resultMap="blog">
-        select b.id,b.title,b.update_time,b.recommend,b.published,b.type_id,t.id,t.name from myblog.t_blog b left outer join
-        myblog.t_type t on b.type_id = t.id order by b.update_time desc
+        select b.id,b.title,b.update_time,b.recommend,b.published,b.type_id,t.id,t.name from t_blog b join
+        t_type t on b.type_id = t.id order by b.update_time desc
     </select>
 
     <!--删除文章-->
     <delete id="deleteBlog">
-        delete from myblog.t_blog where id = #{id}
+        delete from t_blog where id = #{id}
     </delete>
 
 
@@ -68,28 +68,56 @@
 
     <!--查询编辑修改文章-->
     <select id="getBlogById" resultMap="showblog" >
-        select b.id,b.flag,b.title,b.content,b.type_id,
-        b.first_picture,b.description,b.recommend,b.published,b.share_statement,
-        b.appreciation,b.commentabled from myblog.t_blog b  where  b.id = #{id};
+        select
+        b.id,
+        b.flag,
+        b.title,
+        b.content,
+        b.type_id,
+        b.first_picture,
+        b.description,
+        b.recommend,
+        b.published,
+        b.share_statement,
+        b.appreciation,
+        b.commentabled from t_blog b
+        where  b.id = #{id};
     </select>
 
     <!--编辑修改文章-->
     <update id="updateBlog" parameterType="com.star.queryvo.ShowBlog">
-        update myblog.t_blog set published = #{published},flag = #{flag} ,
-        title = #{title}, content = #{content}, type_id = #{typeId},
-        first_picture = #{firstPicture} , description = #{description} , recommend = #{recommend} ,
-        share_statement = #{shareStatement}, appreciation = #{appreciation},
-        commentabled = #{commentabled} ,update_time = #{updateTime} where id = #{id};
+        update t_blog set
+        published=#{published},
+        flag=#{flag} ,
+        title=#{title},
+        content=#{content},
+        type_id=#{typeId},
+        first_picture=#{firstPicture},
+        description=#{description},
+        recommend=#{recommend},
+        share_statement=#{shareStatement},
+        appreciation=#{appreciation},
+        commentabled=#{commentabled},
+        update_time=#{updateTime}
+        where id=#{id};
     </update>
 
 
     <select id="searchByTitleOrTypeOrRecommend" parameterType="com.star.queryvo.SearchBlog" resultMap="blog">
         <bind name="pattern" value="'%' + title + '%'" />
-        select b.id,b.title,b.update_time,b.recommend,b.type_id,t.id,t.name from myblog.t_blog b ,myblog.t_type t
+        select
+        b.id,
+        b.title,
+        t.name,
+        b.recommend,
+        b.published,
+        b.update_time,
+        b.type_id,
+        t.id
+        from t_blog b
+        join t_type t
+        on b.type_id = t.id
         <where>
-            <if test="1 == 1">
-                b.type_id = t.id
-            </if>
             <if test="typeId != null">
                 and b.type_id = #{typeId}
             </if>
