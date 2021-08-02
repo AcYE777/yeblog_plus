@@ -39,7 +39,7 @@
 
     <!--删除评论-->
     <delete id="deleteComment" >
-        delete from myblog.t_comment where id = #{id}
+        delete from t_comment where id = #{id}
     </delete>
 
 

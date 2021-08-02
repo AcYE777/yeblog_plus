@@ -18,10 +18,8 @@ import java.util.List;
 
 /**
  * @Description: 留言页面控制器
- * @Date: Created in 10:57 2020/4/16
- * @Author: ONESTAR
- * @QQ群: 530311074
- * @URL: https://onestar.newstar.net.cn/
+ * @Date: Created in 10:57 2021/8/1
+ * @Author: ye
  */
 @Controller
 public class MessageController {
@@ -32,6 +30,7 @@ public class MessageController {
     @Value("${message.avatar}")
     private String avatar;
 
+    //跳转到留言页面
     @GetMapping("/message")
     public String message() {
         return "message";
@@ -56,13 +55,14 @@ public class MessageController {
         } else {
             message.setAvatar(avatar);
         }
-        if (message.getParentMessage().getId() != null) {
-            message.setParentMessageId(message.getParentMessage().getId());
-        }
+//        Message mg = message.getParentMessage();
+//        if (mg != null && mg.getId() != null) {
+//            message.setParentMessageId(message.getParentMessage().getId());
+//        }
         messageService.saveMessage(message);
         List<Message> messages = messageService.listMessage();
         model.addAttribute("messages", messages);
-        return "message::messageList";
+        return "message :: messageList";
     }
 
 //    删除留言

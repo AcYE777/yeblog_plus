@@ -17,10 +17,8 @@ import java.util.List;
 
 /**
  * @Description: 分类页面显示控制器
- * @Date: Created in 19:57 2020/4/15
- * @Author: ONESTAR
- * @QQ群: 530311074
- * @URL: https://onestar.newstar.net.cn/
+ * @Date: Created in 19:57 2021/8/2
+ * @Author: ye
  */
 @Controller
 public class TypeShowController {
@@ -43,7 +41,7 @@ public class TypeShowController {
         model.addAttribute("types", types);
         List<FirstPageBlog> blogs = blogService.getByTypeId(id);
 
-        PageHelper.startPage(pageNum, 10000);
+        PageHelper.startPage(pageNum, 5);
         PageInfo<FirstPageBlog> pageInfo = new PageInfo<>(blogs);
         model.addAttribute("pageInfo", pageInfo);
         model.addAttribute("activeTypeId", id);

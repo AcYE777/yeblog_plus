@@ -98,6 +98,6 @@ public class IndexController {
         model.addAttribute("blogViewTotal",blogViewTotal);
         model.addAttribute("blogCommentTotal",blogCommentTotal);
         model.addAttribute("blogMessageTotal",blogMessageTotal);
-        return "index :: blogMessage";
+        return "commons/footer :: blogMessage";
     }
 }

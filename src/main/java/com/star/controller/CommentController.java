@@ -56,19 +56,17 @@ public class CommentController {
             //设置头像
             comment.setAvatar(avatar);
         }
-        Comment pt = comment.getParentComment();
-        if (pt != null && pt.getId() != null) {
-            comment.setParentCommentId(comment.getParentComment().getId());
-        }
         commentService.saveComment(comment);
         List<Comment> comments = commentService.listCommentByBlogId(blogId);
         model.addAttribute("comments", comments);
         return "blog :: commentList";
     }
 
-//    删除评论
+//    删除评论 /comment/{param1}/{param2}/delete前端路径,只要这里的GetMapping写了属性就可以用comment接收
     @GetMapping("/comment/{blogId}/{id}/delete")
-    public String delete(@PathVariable Long blogId, @PathVariable Long id,Comment comment, RedirectAttributes attributes, Model model){
+    public String delete(@PathVariable Long blogId, @PathVariable Long id,Comment comment, Model model){
+        System.out.println(comment);
+        //删除该评论同时更新博客表
         commentService.deleteComment(comment,id);
         DetailedBlog detailedBlog = blogService.getDetailedBlog(blogId);
         List<Comment> comments = commentService.listCommentByBlogId(blogId);

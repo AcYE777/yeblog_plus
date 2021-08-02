@@ -96,7 +96,7 @@ body{
 .m-font-size-title-mediul{
     font-size: 30px;
     color: #ffffff;
-    font-family: STSong;
+    /*font-family: STSong;*/
 }
 
 .m-font-size-title{
@@ -106,8 +106,9 @@ body{
 
 .m-font-size-text{
      font-size: 30px;
-     color: #ffffff;
-    /*font-family: STXihei;*/
+     /*color: #ffffff;*/
+     color: #fffffc;
+    font-family: STXihei;
 }
 
 .m-font-size-blog-text{
@@ -397,7 +398,7 @@ body{
     height: 750px;
     line-height: 50px;
     padding-left: 6px;
-    background-color: rgba(0, 0, 0, .60);
+    background-color: rgba(33, 2, 2, 0.16);
     /*color: #FFFFFF;*/
     /*font-size: 26px;*/
     position: absolute;

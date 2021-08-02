@@ -8,9 +8,13 @@
         <version>2.2.5.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
+
+
     <groupId>com.star</groupId>
     <artifactId>myblog</artifactId>
     <version>0.0.1-SNAPSHOT</version>
+    <packaging>jar</packaging>
+
     <name>myblog</name>
     <description>Demo project for Spring Boot</description>
 
@@ -101,6 +105,9 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <mainClass>com.star.MyblogApplication</mainClass>
+                </configuration>
             </plugin>
         </plugins>
     </build>

@@ -35,7 +35,7 @@ public class Comment {
 
     //回复评论,存放当前评论的子评论
     private List<Comment> replyComments = new ArrayList<>();
-    private Comment parentComment;
+    private Comment parentComment; //没用上
     private boolean adminComment;
 
     private DetailedBlog blog;
