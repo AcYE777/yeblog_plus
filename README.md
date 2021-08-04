@@ -7,7 +7,7 @@
 #### 1.前端
 - JS框架：JQuery
 - CSS框架：[Semantic UI官网](https://semantic-ui.com/)
-- 音乐盒[：zplayer](https://gitee.com/supperzh/zplayer)
+- 音乐播放[：zplayer](https://gitee.com/supperzh/zplayer)
 - 照片墙[：lightbox插件](https://github.com/JavaScript-Kit/jkresponsivegallery)
 
 #### 2.后端
