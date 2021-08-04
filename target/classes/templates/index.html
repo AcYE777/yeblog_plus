@@ -2,6 +2,7 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head >
     <meta name="baidu-site-verification" content="U67Xy1Qfos" />
+    <meta name="referrer" content="no-referrer">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>YEBLOG</title>
@@ -82,23 +83,12 @@
     <div class="ui stackable m-container-mini m-opacity grid">
         <div class="m-margin-tb-tiny four wide column" th:each="blog : ${recommendedBlogs}">
             <a href="#" class="class_outer" th:href="@{/blog/{id}(id=${blog.id})}" target="_blank">
-                <img src="https://ss3.baidu.com/-fo3dSag_xI4khGko9WTAnF6hhy/zhidao/wh%3D450%2C600/sign=ab20fa334d540923aa3c6b7aa768fd3f/14ce36d3d539b6001c620ba7ed50352ac65cb775.jpg"
-                     alt="图片丢失" class="ui rounded image">
+                <img th:src="${blog.getFirstPicture()}" alt="图片丢失" class="ui rounded image">
                 <span class="class_cover">
                      <h4 class="m-font-size-blog-text m-margin-tb-tiny" th:text="${blog.title}">大圣，此去欲何?</h4>
                 </span>
             </a>
      </div>
-        <!--    <div class="ui stackable m-container-mini m-opacity grid">-->
-        <!--        <div class="m-margin-tb-tiny four wide column" th:each="blog : ${recommendedBlogs}">-->
-        <!--            <a href="#" class="class_outer" th:href="@{/blog/{id}(id=${blog.id})}" target="_blank">-->
-        <!--                <img src="../static/images/backimg1.jpg" th:src="@{${blog.firstPicture}}"  alt="" class="ui rounded image">-->
-        <!--                <span class="class_cover" >-->
-        <!--                     <h4 class="m-font-size-blog-text m-margin-tb-tiny" th:text="${blog.title}">大圣，此去欲何?</h4>-->
-        <!--                  </span>-->
-        <!--            </a>-->
-        <!--        </div>-->
-        <!--    </div>-->
 </div>
 
 

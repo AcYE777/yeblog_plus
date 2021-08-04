@@ -4,7 +4,7 @@
 
     <!--新增保存分类-->
     <insert id="saveType" parameterType="com.star.entity.Type">
-        insert into myblog.t_type values (#{id},#{name});
+        insert into t_type values (#{id},#{name});
     </insert>
 
     <!--根据id，name查询分类-->

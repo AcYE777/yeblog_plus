@@ -33,7 +33,7 @@
 
     <!--<select id="findByParentCommentId" resultType="com.star.entity.Comment">-->
         <!--select c.id cid,c.nickname,c.email,c.content,c.avatar,c.create_time,c.blog_id,c.parent_comment_id-->
-        <!--from myblog.t_comment c-->
+        <!--from t_comment c-->
         <!--where c.parent_comment_id = #{parentCommentId}-->
     <!--</select>-->
 

@@ -25,7 +25,7 @@
 
     <!--新增保存文章-->
     <insert id="saveBlog" parameterType="com.star.entity.Blog">
-        insert into myblog.t_blog (id,title, content, first_picture, flag,
+        insert into t_blog (id,title, content, first_picture, flag,
         views, comment_count, appreciation, share_statement, commentabled, published,
         recommend, create_time, update_time, type_id, user_id, description)
         values (#{id},#{title},#{content},#{firstPicture},#{flag},#{views},#{commentCount},#{appreciation},
@@ -35,7 +35,7 @@
 
     <!--查询所有文章-->
     <select id="getAllBlog" resultType="com.star.entity.Blog">
-        select * from myblog.t_blog
+        select * from t_blog
     </select>
 
     <!--查询文章管理列表-->
@@ -183,7 +183,7 @@
 
     <!--最新文章-->
     <!--<select id="getNewBlog" resultMap="firstPageBlog">-->
-        <!--select * from myblog.t_blog order by t_blog.update_time desc limit 3;-->
+        <!--select * from t_blog order by t_blog.update_time desc limit 3;-->
     <!--</select>-->
 
     <!--搜索文章-->
@@ -192,7 +192,7 @@
         select b.id,b.title,b.first_picture, b.views,b.comment_count,b.update_time,b.description,
         t.name ,
         u.nickname, u.avatar
-        from myblog.t_blog b, myblog.t_type t,myblog.t_user u
+        from t_blog b, t_type t,t_user u
         where b.type_id = t.id and  u.id = b.user_id and (b.title like #{pattern} or b.content like  #{pattern})
         order by b.update_time desc
     </select>
@@ -238,7 +238,7 @@
 
     <!--文章访问自增-->
     <update id="updateViews" parameterType="com.star.entity.Blog">
-        update myblog.t_blog b set b.views = b.views+1 where b.id = #{id}
+        update t_blog b set b.views = b.views+1 where b.id = #{id}
     </update>
 
     <!--查询出文章评论数量并更新-->
@@ -270,15 +270,15 @@
 
     <!--统计博客信息-->
     <select id="getBlogTotal" resultType="Integer">
-        select count(*) from myblog.t_blog
+        select count(*) from t_blog
     </select>
     <select id="getBlogViewTotal" resultType="Integer">
-        select sum(views) from myblog.t_blog
+        select sum(views) from t_blog
     </select>
     <select id="getBlogCommentTotal" resultType="Integer">
-        select count(*) from myblog.t_comment
+        select count(*) from t_comment
     </select>
     <select id="getBlogMessageTotal" resultType="Integer">
-        select count(*) from myblog.t_message
+        select count(*) from t_message
     </select>
 </mapper>
