@@ -16,7 +16,7 @@
 - 持久层框架：Mybatis
 - 模板框架：Thymeleaf
 - 分页插件：PageHelper
-- 运行环境：阿狸云Linux系统Centos7
+- 运行环境：阿里云Linux系统Centos7
 
 #### 3.数据库
 - MySQL 5.7
