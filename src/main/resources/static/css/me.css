@@ -166,6 +166,7 @@ body{
 .m-margin-tb-tiny {
     margin-top: 0.3em !important;
     margin-bottom: 0.3em !important;
+    opacity: 1 !important;
 }
 
 .m-margin-{
@@ -204,7 +205,10 @@ body{
     opacity: 0.6 !important;
 }
 .m-opacity-small {
-    opacity: 0.4 !important;
+    opacity: 1 !important; /*不透明度*/
+}
+.m-opacity-small-nav {
+    opacity: 0.6 !important;
 }
 
 /*------position---*/
