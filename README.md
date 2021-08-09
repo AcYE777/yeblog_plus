@@ -9,7 +9,7 @@
 - CSS框架：[Semantic UI官网](https://semantic-ui.com/)
 - 音乐播放[：zplayer](https://gitee.com/supperzh/zplayer)
 - 照片墙[：lightbox插件](https://github.com/JavaScript-Kit/jkresponsivegallery)
-
+- 博客编辑[: Markdown插件](https://pandao.github.io/editor.md/) 下载-提取css，editormd.js，editormd.min.js,fonts,images，languages,lib文件-查看example使用
 #### 2.后端
 - 核心框架：SpringBoot 2.2.5
 - 项目构建：jdk1.8、Maven 3
@@ -32,7 +32,7 @@
 - 留言：留言并回复
 - 协同维护
 - 查看相册信息：相册列表、照片名称、照片拍摄地点、时间、照片描述
-- - 搜索文章：导航栏右边搜索框根据关键字搜索
+- 搜索文章：导航栏右边搜索框根据关键字搜索
 #### 2.管理员用户
 - 拥有普通用户所有功能权限
 - 登录：在主页路径下加“/admin”，可进入登录页面，根据数据库的用户名和密码进行登录
