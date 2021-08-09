@@ -9,7 +9,7 @@
 - CSS框架：[Semantic UI官网](https://semantic-ui.com/)
 - 音乐播放[：zplayer](https://gitee.com/supperzh/zplayer)
 - 照片墙[：lightbox插件](https://github.com/JavaScript-Kit/jkresponsivegallery)
-
+- 博客编辑[: Markdown插件](https://pandao.github.io/editor.md/) 下载-提取css，editormd.js，editormd.min.js,fonts,images，languages,lib文件-查看example使用
 #### 2.后端
 - 核心框架：SpringBoot 2.2.5
 - 项目构建：jdk1.8、Maven 3
