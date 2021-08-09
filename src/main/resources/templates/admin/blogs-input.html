@@ -76,6 +76,7 @@
         </div>
 
         <div class="required field">
+          //这里的z-index:1 !important是用于全屏的时候覆盖掉其他组件的
           <div class="" id="md-content" style="z-index: 1 !important;">
             <textarea placeholder="博客内容" name="content" style="display: none" th:text="*{content}"></textarea>
           </div>
@@ -273,10 +274,10 @@
         width   : "100%",
         height  : 640,
         syncScrolling : "single",
-//        path    : "../static/lib/editormd/lib/"
         path    : "/lib/editormd/lib/"
       });
     });
+
     $('.menu.toggle').click(function () {
       $('.m-item').toggleClass('m-mobile-hide');
     });
