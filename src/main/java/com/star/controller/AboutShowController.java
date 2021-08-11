@@ -1,6 +1,7 @@
 package com.star.controller;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 /**
@@ -12,7 +13,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class AboutShowController {
 
     @GetMapping("/about")
-    public String about() {
+    public String about(Model model) {
+        model.addAttribute("id",8);
         return "about";
     }
 

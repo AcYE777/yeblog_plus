@@ -22,6 +22,7 @@ public class FriendsShowController {
     @GetMapping("/friends")
     public String friends(Model model) {
         model.addAttribute("friendlinks",friendLinkService.listFriendLink());
+        model.addAttribute("id",6);
         return "friends";
     }
 

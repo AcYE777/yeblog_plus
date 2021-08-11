@@ -178,7 +178,7 @@
     <select id="getAllRecommendBlog" resultMap="recommendBlog">
         select * from t_blog
         where recommend = true
-        order by update_time desc limit 4;
+        order by update_time desc limit 6;
     </select>
 
     <!--最新文章-->

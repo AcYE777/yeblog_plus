@@ -1,0 +1,7 @@
+2021-08-09 22:22:15.674  INFO 11028 --- [restartedMain] com.star.MyblogApplication               : Starting MyblogApplication on PC-20170517RPEF with PID 11028 (started by Administrator in D:\maven\springboot\github项目资源\myblog-mybatis-master)
+2021-08-09 22:22:15.688  INFO 11028 --- [restartedMain] com.star.MyblogApplication               : The following profiles are active: pro
+2021-08-09 22:22:20.156  INFO 11028 --- [restartedMain] com.star.MyblogApplication               : Started MyblogApplication in 5.422 seconds (JVM running for 6.568)
+2021-08-09 22:23:31.795  INFO 11028 --- [http-nio-8081-exec-1] com.star.aspect.LogAspect                : Request : {url='http://localhost:8081/', ip='127.0.0.1', classMethod='com.star.controller.IndexController.index', args=[{}, 1, {}]}
+2021-08-09 22:23:32.425  INFO 11028 --- [http-nio-8081-exec-1] com.star.aspect.LogAspect                : Result : index
+2021-08-09 22:23:33.716  INFO 11028 --- [http-nio-8081-exec-10] com.star.aspect.LogAspect                : Request : {url='http://localhost:8081/footer/blogmessage', ip='127.0.0.1', classMethod='com.star.controller.IndexController.blogMessage', args=[{}]}
+2021-08-09 22:23:33.822  INFO 11028 --- [http-nio-8081-exec-10] com.star.aspect.LogAspect                : Result : commons/footer :: blogMessage

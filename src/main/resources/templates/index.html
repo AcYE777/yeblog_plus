@@ -57,16 +57,16 @@
         <h5 class="m-font-size-text-init-title">“海鸟跟鱼相爱”</h5>
         <h5 class="m-font-size-text-init-title">“只是一场意外”</h5>
         <div id="waypoint" class="ui m-margin-top-large" align="center">
-            <a href="#" th:href="@{/}" class="ui inverted primary circular icon button m-opacity-small m-item item m-mobile-hide m-index-btn" th:classappend="${n==1} ? 'active'"><i class="home icon"></i>首页</a>
-            <a href="#" th:href="@{/types/-1}" class="ui inverted orange circular icon button m-opacity-small m-item item m-mobile-hide m-index-btn" th:classappend="${n==2} ? 'active'"><i class="clone outline icon"></i>导航</a>
-            <a href="#" th:href="@{/archives}" class="ui inverted yellow circular icon button m-opacity-small m-item item m-mobile-hide" th:classappend="${n==4} ? 'active'"><i class="clock icon"></i>时间段</a>
-            <a href="#" th:href="@{/music}" class="ui inverted green circular icon button m-opacity-small m-item item m-mobile-hide" th:classappend="${n==5} ? 'active'"><i class="music icon"></i>音乐</a>
-            <a href="#" th:href="@{/message}" class="ui inverted teal circular icon button m-opacity-small m-item item m-mobile-hide" th:classappend="${n==6} ? 'active'"><i class="book icon"></i>留言</a>
-            <a href="#" th:href="@{/friends}" class="ui inverted pink circular icon button m-opacity-small m-item item m-mobile-hide" th:classappend="${n==7} ? 'active'"><i class="pencil alternate icon"></i>协同维护</a>
-            <a href="#" th:href="@{/picture}" class="ui inverted red circular icon button m-opacity-small m-item item m-mobile-hide" th:classappend="${n==8} ? 'active'"><i class="image icon "></i>照片</a>
+            <a href="#" th:href="@{/}" class="ui inverted primary circular icon button m-opacity-small m-item item m-mobile-hide m-index-btn" th:classappend="${n==1} ? 'active' : ''"><i class="home icon"></i>首页</a>
+            <a href="#" th:href="@{/types/-1}" class="ui inverted orange circular icon button m-opacity-small m-item item m-mobile-hide m-index-btn" th:classappend="${n==2} ? 'active' : ''"><i class="clone outline icon"></i>导航</a>
+            <a href="#" th:href="@{/archives}" class="ui inverted yellow circular icon button m-opacity-small m-item item m-mobile-hide" th:classappend="${n==4} ? 'active' : ''"><i class="clock icon"></i>时间段</a>
+            <a href="#" th:href="@{/music}" class="ui inverted green circular icon button m-opacity-small m-item item m-mobile-hide" th:classappend="${n==5} ? 'active' : ''"><i class="music icon"></i>音乐</a>
+            <a href="#" th:href="@{/message}" class="ui inverted teal circular icon button m-opacity-small m-item item m-mobile-hide" th:classappend="${n==6} ? 'active' : ''"><i class="book icon"></i>留言</a>
+            <a href="#" th:href="@{/friends}" class="ui inverted pink circular icon button m-opacity-small m-item item m-mobile-hide" th:classappend="${n==7} ? 'active' : ''"><i class="pencil alternate icon"></i>协同维护</a>
+            <a href="#" th:href="@{/picture}" class="ui inverted red circular icon button m-opacity-small m-item item m-mobile-hide" th:classappend="${n==8} ? 'active' : ''"><i class="image icon "></i>照片</a>
 
 
-            <a href="#" th:href="@{/about}" class="ui inverted olive circular icon button m-opacity-small m-item item m-mobile-hide" th:classappend="${n==9} ? 'active'"><i class="info icon"></i>关于我</a>
+            <a href="#" th:href="@{/about}" class="ui inverted olive circular icon button m-opacity-small m-item item m-mobile-hide" th:classappend="${n==9} ? 'active' : ''"><i class="info icon"></i>关于我</a>
         </div>
         <div class="hiddenDiv"></div>
     </div>
@@ -82,16 +82,35 @@
             <i class="bookmark icon"></i>最新推荐
         </div>
     </div>
-    <div class="ui stackable m-container-mini m-opacity grid">
-        <div class="m-margin-tb-tiny four wide column" th:each="blog : ${recommendedBlogs}">
-            <a href="#" class="class_outer" th:href="@{/blog/{id}(id=${blog.id})}" target="_blank">
-                <img th:src="${blog.getFirstPicture()}" alt="图片丢失" class="ui rounded image">
-                <span class="class_cover">
-                     <h4 class="m-font-size-blog-text m-margin-tb-tiny" th:text="${blog.title}">大圣，此去欲何?</h4>
-                </span>
-            </a>
-     </div>
+    <div class="mydd">
+        <section style="background: url(https://p.pstatp.com/origin/pgc-image/e9a60cc3fd8142439bc68bc71bf96469) no-repeat;background-size: contain">
+            <div class="m-margin-tb-tiny four wide column" th:each = "blog : ${recommendedBlogs}">
+                <a href="#" class="class_outer" th:href="@{/blog/{id}(id=${blog.id})}" target="_blank">
+                    <img th:src="${blog.getFirstPicture()}" alt="图片丢失" class="ui rounded image" style="width: auto !important; height: auto !important;">
+                    <span class="class_cover">
+                        <h4 class="m-font-size-blog-text m-margin-tb-tiny" th:text="${blog.title}"></h4>
+                    </span>
+                </a>
+            </div>
+        </section>
+    </div>
+<!--    <div class="ui stackable m-container-mini m-opacity grid">-->
+<!--        <div class="m-margin-tb-tiny four wide column" th:each="blog : ${recommendedBlogs}">-->
+<!--            <a href="#" class="class_outer" th:href="@{/blog/{id}(id=${blog.id})}" target="_blank">-->
+<!--                <img th:src="${blog.getFirstPicture()}" alt="图片丢失" class="ui rounded image">-->
+<!--                <span class="class_cover">-->
+<!--                     <h4 class="m-font-size-blog-text m-margin-tb-tiny" th:text="${blog.title}">大圣，此去欲何?</h4>-->
+<!--                </span>-->
+<!--            </a>-->
+<!--        </div>-->
+<!--    </div>-->
 </div>
+
+
+
+
+
+
 
 
 <!--中间内容-->
