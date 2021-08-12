@@ -5,16 +5,14 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 
 /**
  * @Description: 自定义异常
- * @Author: ONESTAR
- * @Date: Created in 16:03 2020/3/25
- * @QQ群: 530311074
- * @URL: https://onestar.newstar.net.cn/
+ * @Author: ye
+ * @Date: Created in 16:03 2021/8/11
  */
+// 检测404页面
 @ResponseStatus(HttpStatus.NOT_FOUND)
 public class NotFoundException extends RuntimeException{
     public NotFoundException() {
     }
-
     public NotFoundException(String message) {
         super(message);
     }

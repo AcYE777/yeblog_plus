@@ -12,10 +12,8 @@ import javax.servlet.http.HttpServletRequest;
 
 /**
  * @Description: 拦截异常处理
- * @Author: ONESTAR
- * @Date: Created in 15:48 2020/3/25
- * @QQ群: 530311074
- * @URL: https://onestar.newstar.net.cn/
+ * @Author: ye
+ * @Date: Created in 15:48 2021/8/11
  */
 //拦截有Controller注解的控制器
 @ControllerAdvice
@@ -25,11 +23,12 @@ public class ControllerExceptionHandler {
 
     @ExceptionHandler(Exception.class)
     public ModelAndView exceptionHander(HttpServletRequest request, Exception e) throws Exception {
+        // {}作为占位符
         logger.error("Requst URL : {}，Exception : {}", request.getRequestURL(),e);
 
-//        当标识了状态码的时候就不拦截
+        // 当标识了状态码的时候就不拦截
         if (AnnotationUtils.findAnnotation(e.getClass(), ResponseStatus.class) != null) {
-            throw e;
+            throw e; // 若在方法里面进行直接抛出异常则默认给springboot进行处理
         }
 
         ModelAndView mv = new ModelAndView();

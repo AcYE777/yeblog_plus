@@ -38,6 +38,7 @@ public class TypeController {
         List<Type> list = typeService.getAllType();
         PageInfo<Type> pageInfo = new PageInfo<>(list);
         model.addAttribute("pageInfo",pageInfo);
+        model.addAttribute("id", 2);
         return "admin/types";
     }
 

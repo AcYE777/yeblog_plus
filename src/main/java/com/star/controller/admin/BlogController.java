@@ -23,10 +23,8 @@ import java.util.List;
 
 /**
  * @Description: 博客管理控制器
- * @Author: ONESTAR
- * @Date: Created in 12:08 2020/3/27
- * @QQ群: 530311074
- * @URL: https://onestar.newstar.net.cn/
+ * @Author: ye
+ * @Date: Created in 12:08 2021/8/12
  */
 @Controller
 @RequestMapping("/admin")
@@ -47,6 +45,7 @@ public class BlogController {
         PageInfo<BlogQuery> pageInfo = new PageInfo<>(list);
         model.addAttribute("types",typeService.getAllType());
         model.addAttribute("pageInfo",pageInfo);
+        model.addAttribute("id",1);
         return "admin/blogs";
     }
 

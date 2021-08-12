@@ -35,6 +35,7 @@ public class PictureController {
         List<Picture> listFriendLink = pictureService.listPicture();
         PageInfo<Picture> pageInfo = new PageInfo<Picture>(listFriendLink);
         model.addAttribute("pageInfo",pageInfo);
+        model.addAttribute("id", 4);
         return "admin/pictures";
     }
 
