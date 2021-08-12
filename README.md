@@ -1,7 +1,7 @@
 # yeblog_plus
 个人博客系统（Mybatis+thymeleaf+SpringBoot）
 
-博客地址：https://www.yeidea.top/
+博客地址：http://www.yeidea.top/
 
 ### 一、所用技术
 #### 1.前端
