@@ -1,3 +1,130 @@
-2021-08-19 00:08:40.834  INFO 8528 --- [main] com.star.MyblogApplicationTests          : Starting MyblogApplicationTests on PC-20170517RPEF with PID 8528 (started by Administrator in D:\maven\springboot\github��Ŀ��Դ\myblog-mybatis-master)
-2021-08-19 00:08:40.841  INFO 8528 --- [main] com.star.MyblogApplicationTests          : The following profiles are active: pro
-2021-08-19 00:08:47.002  INFO 8528 --- [main] com.star.MyblogApplicationTests          : Started MyblogApplicationTests in 6.997 seconds (JVM running for 8.748)
+2021-09-11 18:00:00.375  INFO 12876 --- [restartedMain] com.star.MyblogApplication               : Starting MyblogApplication on PC-20170517RPEF with PID 12876 (started by Administrator in D:\maven\springboot\github项目资源\myblog-mybatis-master)
+2021-09-11 18:00:00.385  INFO 12876 --- [restartedMain] com.star.MyblogApplication               : The following profiles are active: pro
+2021-09-11 18:00:04.755 ERROR 12876 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8081 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8081 or configure this application to listen on another port.
+
+2021-09-11 18:00:41.109  INFO 9360 --- [restartedMain] com.star.MyblogApplication               : Starting MyblogApplication on PC-20170517RPEF with PID 9360 (started by Administrator in D:\maven\springboot\github项目资源\myblog-mybatis-master)
+2021-09-11 18:00:41.112  INFO 9360 --- [restartedMain] com.star.MyblogApplication               : The following profiles are active: pro
+2021-09-11 18:00:45.422 ERROR 9360 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8081 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8081 or configure this application to listen on another port.
+
+2021-09-11 18:01:38.708  INFO 12576 --- [restartedMain] com.star.MyblogApplication               : Starting MyblogApplication on PC-20170517RPEF with PID 12576 (started by Administrator in D:\maven\springboot\github项目资源\myblog-mybatis-master)
+2021-09-11 18:01:38.713  INFO 12576 --- [restartedMain] com.star.MyblogApplication               : The following profiles are active: pro
+2021-09-11 18:01:42.704  INFO 12576 --- [restartedMain] com.star.MyblogApplication               : Started MyblogApplication in 4.704 seconds (JVM running for 5.72)
+2021-09-11 18:02:02.777  INFO 12576 --- [http-nio-8080-exec-1] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/', ip='127.0.0.1', classMethod='com.star.controller.IndexController.index', args=[{}, 1, {}]}
+2021-09-11 18:02:03.395  INFO 12576 --- [http-nio-8080-exec-1] com.star.aspect.LogAspect                : Result : index
+2021-09-11 18:02:04.771  INFO 12576 --- [http-nio-8080-exec-10] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/footer/blogmessage', ip='127.0.0.1', classMethod='com.star.controller.IndexController.blogMessage', args=[{}]}
+2021-09-11 18:02:04.860  INFO 12576 --- [http-nio-8080-exec-10] com.star.aspect.LogAspect                : Result : commons/footer :: blogMessage
+2021-09-11 18:03:08.888  INFO 12576 --- [http-nio-8080-exec-1] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/', ip='127.0.0.1', classMethod='com.star.controller.IndexController.index', args=[{}, 1, {}]}
+2021-09-11 18:03:09.018  INFO 12576 --- [http-nio-8080-exec-1] com.star.aspect.LogAspect                : Result : index
+2021-09-11 18:03:09.183  INFO 12576 --- [http-nio-8080-exec-10] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/footer/blogmessage', ip='127.0.0.1', classMethod='com.star.controller.IndexController.blogMessage', args=[{}]}
+2021-09-11 18:03:09.264  INFO 12576 --- [http-nio-8080-exec-10] com.star.aspect.LogAspect                : Result : commons/footer :: blogMessage
+2021-09-11 18:59:43.223  INFO 9992 --- [restartedMain] com.star.MyblogApplication               : Starting MyblogApplication on PC-20170517RPEF with PID 9992 (started by Administrator in D:\maven\springboot\github项目资源\myblog-mybatis-master)
+2021-09-11 18:59:43.226  INFO 9992 --- [restartedMain] com.star.MyblogApplication               : The following profiles are active: pro
+2021-09-11 18:59:47.311  INFO 9992 --- [restartedMain] com.star.MyblogApplication               : Started MyblogApplication in 4.83 seconds (JVM running for 5.833)
+2021-09-11 19:03:02.951  INFO 10028 --- [restartedMain] com.star.MyblogApplication               : Starting MyblogApplication on PC-20170517RPEF with PID 10028 (started by Administrator in D:\maven\springboot\github项目资源\myblog-mybatis-master)
+2021-09-11 19:03:02.954  INFO 10028 --- [restartedMain] com.star.MyblogApplication               : The following profiles are active: pro
+2021-09-11 19:03:06.907  INFO 10028 --- [restartedMain] com.star.MyblogApplication               : Started MyblogApplication in 4.704 seconds (JVM running for 5.917)
+2021-09-11 19:03:59.418  INFO 11908 --- [restartedMain] com.star.MyblogApplication               : Starting MyblogApplication on PC-20170517RPEF with PID 11908 (started by Administrator in D:\maven\springboot\github项目资源\myblog-mybatis-master)
+2021-09-11 19:03:59.422  INFO 11908 --- [restartedMain] com.star.MyblogApplication               : The following profiles are active: pro
+2021-09-11 19:04:03.537  INFO 11908 --- [restartedMain] com.star.MyblogApplication               : Started MyblogApplication in 4.831 seconds (JVM running for 5.944)
+2021-09-11 19:06:38.399  INFO 8296 --- [restartedMain] com.star.MyblogApplication               : Starting MyblogApplication on PC-20170517RPEF with PID 8296 (started by Administrator in D:\maven\springboot\github项目资源\myblog-mybatis-master)
+2021-09-11 19:06:38.403  INFO 8296 --- [restartedMain] com.star.MyblogApplication               : The following profiles are active: pro
+2021-09-11 19:06:42.469  INFO 8296 --- [restartedMain] com.star.MyblogApplication               : Started MyblogApplication in 4.838 seconds (JVM running for 5.864)
+2021-09-11 19:06:42.754  INFO 8296 --- [http-nio-8080-exec-1] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/', ip='127.0.0.1', classMethod='com.star.controller.IndexController.index', args=[{}, 1, {}]}
+2021-09-11 19:06:43.439  INFO 8296 --- [http-nio-8080-exec-1] com.star.aspect.LogAspect                : Result : index
+2021-09-11 19:06:44.147  INFO 8296 --- [http-nio-8080-exec-10] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/footer/blogmessage', ip='127.0.0.1', classMethod='com.star.controller.IndexController.blogMessage', args=[{}]}
+2021-09-11 19:06:44.264  INFO 8296 --- [http-nio-8080-exec-10] com.star.aspect.LogAspect                : Result : commons/footer :: blogMessage
+2021-09-11 19:06:49.052  INFO 8296 --- [http-nio-8080-exec-1] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/archives', ip='127.0.0.1', classMethod='com.star.controller.ArchiveShowController.archive', args=[{}]}
+2021-09-11 19:06:49.097  INFO 8296 --- [http-nio-8080-exec-1] com.star.aspect.LogAspect                : Result : archives
+2021-09-11 19:06:49.236  INFO 8296 --- [http-nio-8080-exec-9] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/footer/blogmessage', ip='127.0.0.1', classMethod='com.star.controller.IndexController.blogMessage', args=[{}]}
+2021-09-11 19:06:49.305  INFO 8296 --- [http-nio-8080-exec-9] com.star.aspect.LogAspect                : Result : commons/footer :: blogMessage
+2021-09-11 19:06:54.148  INFO 8296 --- [http-nio-8080-exec-10] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/music', ip='127.0.0.1', classMethod='com.star.controller.MusicShowController.music', args=[{}]}
+2021-09-11 19:06:54.153  INFO 8296 --- [http-nio-8080-exec-10] com.star.aspect.LogAspect                : Result : music
+2021-09-11 19:06:55.617  INFO 8296 --- [http-nio-8080-exec-2] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/message', ip='127.0.0.1', classMethod='com.star.controller.MessageController.message', args=[{}]}
+2021-09-11 19:06:55.622  INFO 8296 --- [http-nio-8080-exec-2] com.star.aspect.LogAspect                : Result : message
+2021-09-11 19:06:55.791  INFO 8296 --- [http-nio-8080-exec-5] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/footer/blogmessage', ip='127.0.0.1', classMethod='com.star.controller.IndexController.blogMessage', args=[{}]}
+2021-09-11 19:06:55.832  INFO 8296 --- [http-nio-8080-exec-3] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/messagecomment', ip='127.0.0.1', classMethod='com.star.controller.MessageController.messages', args=[{}]}
+2021-09-11 19:06:55.870  INFO 8296 --- [http-nio-8080-exec-5] com.star.aspect.LogAspect                : Result : commons/footer :: blogMessage
+2021-09-11 19:06:55.914  INFO 8296 --- [http-nio-8080-exec-3] com.star.aspect.LogAspect                : Result : message::messageList
+2021-09-11 19:08:53.487  INFO 8296 --- [http-nio-8080-exec-8] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/', ip='127.0.0.1', classMethod='com.star.controller.IndexController.index', args=[{}, 1, {}]}
+2021-09-11 19:08:53.645  INFO 8296 --- [http-nio-8080-exec-8] com.star.aspect.LogAspect                : Result : index
+2021-09-11 19:08:53.828  INFO 8296 --- [http-nio-8080-exec-2] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/footer/blogmessage', ip='127.0.0.1', classMethod='com.star.controller.IndexController.blogMessage', args=[{}]}
+2021-09-11 19:08:54.782  INFO 8296 --- [http-nio-8080-exec-2] com.star.aspect.LogAspect                : Result : commons/footer :: blogMessage
+2021-09-11 19:08:55.860  INFO 8296 --- [http-nio-8080-exec-8] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/blog/12', ip='127.0.0.1', classMethod='com.star.controller.IndexController.blog', args=[12, {}]}
+2021-09-11 19:08:59.125  INFO 8296 --- [http-nio-8080-exec-8] com.star.aspect.LogAspect                : Result : blog
+2021-09-11 19:08:59.960  INFO 8296 --- [http-nio-8080-exec-7] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/footer/blogmessage', ip='127.0.0.1', classMethod='com.star.controller.IndexController.blogMessage', args=[{}]}
+2021-09-11 19:09:00.470  INFO 8296 --- [http-nio-8080-exec-7] com.star.aspect.LogAspect                : Result : commons/footer :: blogMessage
+2021-09-11 19:12:42.911  INFO 692 --- [restartedMain] com.star.MyblogApplication               : Starting MyblogApplication on PC-20170517RPEF with PID 692 (started by Administrator in D:\maven\springboot\github项目资源\myblog-mybatis-master)
+2021-09-11 19:12:42.915  INFO 692 --- [restartedMain] com.star.MyblogApplication               : The following profiles are active: pro
+2021-09-11 19:12:47.069  INFO 692 --- [restartedMain] com.star.MyblogApplication               : Started MyblogApplication in 4.918 seconds (JVM running for 5.959)
+2021-09-11 19:13:48.867  INFO 8932 --- [restartedMain] com.star.MyblogApplication               : Starting MyblogApplication on PC-20170517RPEF with PID 8932 (started by Administrator in D:\maven\springboot\github项目资源\myblog-mybatis-master)
+2021-09-11 19:13:48.872  INFO 8932 --- [restartedMain] com.star.MyblogApplication               : The following profiles are active: pro
+2021-09-11 19:13:53.025  INFO 8932 --- [restartedMain] com.star.MyblogApplication               : Started MyblogApplication in 4.865 seconds (JVM running for 5.861)
+2021-09-11 19:13:53.709  INFO 8932 --- [http-nio-8080-exec-7] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/footer/blogmessage', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.blogMessage', args=[{}]}
+2021-09-11 19:13:54.216  INFO 8932 --- [http-nio-8080-exec-7] com.star.aspect.LogAspect                : Result : commons/footer :: blogMessage
+2021-09-11 19:16:08.548  INFO 10600 --- [restartedMain] com.star.MyblogApplication               : Starting MyblogApplication on PC-20170517RPEF with PID 10600 (started by Administrator in D:\maven\springboot\github项目资源\myblog-mybatis-master)
+2021-09-11 19:16:08.552  INFO 10600 --- [restartedMain] com.star.MyblogApplication               : The following profiles are active: pro
+2021-09-11 19:16:12.543  INFO 10600 --- [restartedMain] com.star.MyblogApplication               : Started MyblogApplication in 4.698 seconds (JVM running for 5.699)
+2021-09-11 19:16:16.179  INFO 10600 --- [http-nio-8080-exec-7] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/footer/blogmessage', ip='127.0.0.1', classMethod='com.star.controller.IndexController.blogMessage', args=[{}]}
+2021-09-11 19:16:16.724  INFO 10600 --- [http-nio-8080-exec-7] com.star.aspect.LogAspect                : Result : commons/footer :: blogMessage
+2021-09-11 19:16:21.178  INFO 10600 --- [http-nio-8080-exec-3] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/footer/blogmessage', ip='127.0.0.1', classMethod='com.star.controller.IndexController.blogMessage', args=[{}]}
+2021-09-11 19:16:21.277  INFO 10600 --- [http-nio-8080-exec-3] com.star.aspect.LogAspect                : Result : commons/footer :: blogMessage
+2021-09-11 19:16:22.861  INFO 10600 --- [http-nio-8080-exec-5] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/', ip='127.0.0.1', classMethod='com.star.controller.IndexController.index', args=[{}, 1, {}]}
+2021-09-11 19:16:23.038  INFO 10600 --- [http-nio-8080-exec-5] com.star.aspect.LogAspect                : Result : index
+2021-09-11 19:16:23.278  INFO 10600 --- [http-nio-8080-exec-3] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/footer/blogmessage', ip='127.0.0.1', classMethod='com.star.controller.IndexController.blogMessage', args=[{}]}
+2021-09-11 19:16:23.364  INFO 10600 --- [http-nio-8080-exec-3] com.star.aspect.LogAspect                : Result : commons/footer :: blogMessage
+2021-09-11 19:16:31.590  INFO 10600 --- [http-nio-8080-exec-5] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/types/-1', ip='127.0.0.1', classMethod='com.star.controller.TypeShowController.types', args=[1, -1, {}]}
+2021-09-11 19:16:31.659  INFO 10600 --- [http-nio-8080-exec-5] com.star.aspect.LogAspect                : Result : types
+2021-09-11 19:16:31.804  INFO 10600 --- [http-nio-8080-exec-10] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/footer/blogmessage', ip='127.0.0.1', classMethod='com.star.controller.IndexController.blogMessage', args=[{}]}
+2021-09-11 19:16:31.876  INFO 10600 --- [http-nio-8080-exec-10] com.star.aspect.LogAspect                : Result : commons/footer :: blogMessage
+2021-09-11 19:16:33.332  INFO 10600 --- [http-nio-8080-exec-4] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/archives', ip='127.0.0.1', classMethod='com.star.controller.ArchiveShowController.archive', args=[{}]}
+2021-09-11 19:16:33.376  INFO 10600 --- [http-nio-8080-exec-4] com.star.aspect.LogAspect                : Result : archives
+2021-09-11 19:16:33.501  INFO 10600 --- [http-nio-8080-exec-2] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/footer/blogmessage', ip='127.0.0.1', classMethod='com.star.controller.IndexController.blogMessage', args=[{}]}
+2021-09-11 19:16:33.574  INFO 10600 --- [http-nio-8080-exec-2] com.star.aspect.LogAspect                : Result : commons/footer :: blogMessage
+2021-09-11 19:16:34.212  INFO 10600 --- [http-nio-8080-exec-8] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/music', ip='127.0.0.1', classMethod='com.star.controller.MusicShowController.music', args=[{}]}
+2021-09-11 19:16:34.216  INFO 10600 --- [http-nio-8080-exec-8] com.star.aspect.LogAspect                : Result : music
+2021-09-11 19:16:35.017  INFO 10600 --- [http-nio-8080-exec-3] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/message', ip='127.0.0.1', classMethod='com.star.controller.MessageController.message', args=[{}]}
+2021-09-11 19:16:35.022  INFO 10600 --- [http-nio-8080-exec-3] com.star.aspect.LogAspect                : Result : message
+2021-09-11 19:16:35.140  INFO 10600 --- [http-nio-8080-exec-5] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/footer/blogmessage', ip='127.0.0.1', classMethod='com.star.controller.IndexController.blogMessage', args=[{}]}
+2021-09-11 19:16:35.166  INFO 10600 --- [http-nio-8080-exec-6] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/messagecomment', ip='127.0.0.1', classMethod='com.star.controller.MessageController.messages', args=[{}]}
+2021-09-11 19:16:35.256  INFO 10600 --- [http-nio-8080-exec-6] com.star.aspect.LogAspect                : Result : message::messageList
+2021-09-11 19:16:35.274  INFO 10600 --- [http-nio-8080-exec-5] com.star.aspect.LogAspect                : Result : commons/footer :: blogMessage
+2021-09-11 19:16:37.752  INFO 10600 --- [http-nio-8080-exec-9] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/friends', ip='127.0.0.1', classMethod='com.star.controller.FriendsShowController.friends', args=[{}]}
+2021-09-11 19:16:37.797  INFO 10600 --- [http-nio-8080-exec-9] com.star.aspect.LogAspect                : Result : friends
+2021-09-11 19:16:37.891  INFO 10600 --- [http-nio-8080-exec-10] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/footer/blogmessage', ip='127.0.0.1', classMethod='com.star.controller.IndexController.blogMessage', args=[{}]}
+2021-09-11 19:16:37.986  INFO 10600 --- [http-nio-8080-exec-10] com.star.aspect.LogAspect                : Result : commons/footer :: blogMessage
+2021-09-11 19:16:39.406  INFO 10600 --- [http-nio-8080-exec-6] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/picture', ip='127.0.0.1', classMethod='com.star.controller.PictureShowController.friends', args=[{}]}
+2021-09-11 19:16:39.450  INFO 10600 --- [http-nio-8080-exec-6] com.star.aspect.LogAspect                : Result : picture
+2021-09-11 19:16:39.614  INFO 10600 --- [http-nio-8080-exec-10] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/footer/blogmessage', ip='127.0.0.1', classMethod='com.star.controller.IndexController.blogMessage', args=[{}]}
+2021-09-11 19:16:39.706  INFO 10600 --- [http-nio-8080-exec-10] com.star.aspect.LogAspect                : Result : commons/footer :: blogMessage
+2021-09-11 19:16:41.127  INFO 10600 --- [http-nio-8080-exec-6] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/about', ip='127.0.0.1', classMethod='com.star.controller.AboutShowController.about', args=[{}]}
+2021-09-11 19:16:41.130  INFO 10600 --- [http-nio-8080-exec-6] com.star.aspect.LogAspect                : Result : about
+2021-09-11 19:16:41.240  INFO 10600 --- [http-nio-8080-exec-6] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/footer/blogmessage', ip='127.0.0.1', classMethod='com.star.controller.IndexController.blogMessage', args=[{}]}
+2021-09-11 19:16:41.352  INFO 10600 --- [http-nio-8080-exec-6] com.star.aspect.LogAspect                : Result : commons/footer :: blogMessage
+2021-09-11 19:16:45.634  INFO 10600 --- [http-nio-8080-exec-7] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/', ip='127.0.0.1', classMethod='com.star.controller.IndexController.index', args=[{}, 1, {}]}
+2021-09-11 19:16:45.752  INFO 10600 --- [http-nio-8080-exec-7] com.star.aspect.LogAspect                : Result : index
+2021-09-11 19:16:45.941  INFO 10600 --- [http-nio-8080-exec-6] com.star.aspect.LogAspect                : Request : {url='http://localhost:8080/footer/blogmessage', ip='127.0.0.1', classMethod='com.star.controller.IndexController.blogMessage', args=[{}]}
+2021-09-11 19:16:46.045  INFO 10600 --- [http-nio-8080-exec-6] com.star.aspect.LogAspect                : Result : commons/footer :: blogMessage

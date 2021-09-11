@@ -1,0 +1,3 @@
+2021-08-19 00:08:40.834  INFO 8528 --- [main] com.star.MyblogApplicationTests          : Starting MyblogApplicationTests on PC-20170517RPEF with PID 8528 (started by Administrator in D:\maven\springboot\github项目资源\myblog-mybatis-master)
+2021-08-19 00:08:40.841  INFO 8528 --- [main] com.star.MyblogApplicationTests          : The following profiles are active: pro
+2021-08-19 00:08:47.002  INFO 8528 --- [main] com.star.MyblogApplicationTests          : Started MyblogApplicationTests in 6.997 seconds (JVM running for 8.748)
