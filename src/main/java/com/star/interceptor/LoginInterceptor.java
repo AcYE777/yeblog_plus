@@ -6,11 +6,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * @Description: 登录过滤拦截
- * @Author: ONESTAR
- * @Date: Created in 13:55 2020/3/27
- * @QQ群: 530311074
- * @URL: https://onestar.newstar.net.cn/
+ * @Description: 登录过滤拦截 1.定义一个规则根据session来判断 2.写一个配置类说明拦截的路径
+ * @Author: ye
+ * @Date: Created in 13:55 2021/8/15
  */
 public class LoginInterceptor extends HandlerInterceptorAdapter {
     @Override

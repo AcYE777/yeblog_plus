@@ -1,0 +1,18 @@
+2021-08-15 09:58:59.948  INFO 8384 --- [main] com.star.MyblogApplicationTests          : Starting MyblogApplicationTests on PC-20170517RPEF with PID 8384 (started by Administrator in D:\maven\springboot\github项目资源\myblog-mybatis-master)
+2021-08-15 09:58:59.956  INFO 8384 --- [main] com.star.MyblogApplicationTests          : The following profiles are active: pro
+2021-08-15 09:59:05.511  INFO 8384 --- [main] com.star.MyblogApplicationTests          : Started MyblogApplicationTests in 6.382 seconds (JVM running for 7.965)
+2021-08-15 10:02:18.657  INFO 9140 --- [main] com.star.MyblogApplicationTests          : Starting MyblogApplicationTests on PC-20170517RPEF with PID 9140 (started by Administrator in D:\maven\springboot\github项目资源\myblog-mybatis-master)
+2021-08-15 10:02:18.659  INFO 9140 --- [main] com.star.MyblogApplicationTests          : The following profiles are active: pro
+2021-08-15 10:02:26.289  INFO 9140 --- [main] com.star.MyblogApplicationTests          : Started MyblogApplicationTests in 8.701 seconds (JVM running for 11.13)
+2021-08-15 10:03:34.324  INFO 9400 --- [main] com.star.MyblogApplicationTests          : Starting MyblogApplicationTests on PC-20170517RPEF with PID 9400 (started by Administrator in D:\maven\springboot\github项目资源\myblog-mybatis-master)
+2021-08-15 10:03:34.326  INFO 9400 --- [main] com.star.MyblogApplicationTests          : The following profiles are active: pro
+2021-08-15 10:03:39.711  INFO 9400 --- [main] com.star.MyblogApplicationTests          : Started MyblogApplicationTests in 6.145 seconds (JVM running for 7.522)
+2021-08-15 10:15:23.842  INFO 8076 --- [main] com.star.MyblogApplicationTests          : Starting MyblogApplicationTests on PC-20170517RPEF with PID 8076 (started by Administrator in D:\maven\springboot\github项目资源\myblog-mybatis-master)
+2021-08-15 10:15:23.843  INFO 8076 --- [main] com.star.MyblogApplicationTests          : The following profiles are active: pro
+2021-08-15 10:15:29.457  INFO 8076 --- [main] com.star.MyblogApplicationTests          : Started MyblogApplicationTests in 6.408 seconds (JVM running for 7.861)
+2021-08-15 10:15:56.053  INFO 5488 --- [main] com.star.MyblogApplicationTests          : Starting MyblogApplicationTests on PC-20170517RPEF with PID 5488 (started by Administrator in D:\maven\springboot\github项目资源\myblog-mybatis-master)
+2021-08-15 10:15:56.055  INFO 5488 --- [main] com.star.MyblogApplicationTests          : The following profiles are active: pro
+2021-08-15 10:16:01.486  INFO 5488 --- [main] com.star.MyblogApplicationTests          : Started MyblogApplicationTests in 6.183 seconds (JVM running for 7.695)
+2021-08-15 10:22:37.559  INFO 4580 --- [main] com.star.MyblogApplicationTests          : Starting MyblogApplicationTests on PC-20170517RPEF with PID 4580 (started by Administrator in D:\maven\springboot\github项目资源\myblog-mybatis-master)
+2021-08-15 10:22:37.561  INFO 4580 --- [main] com.star.MyblogApplicationTests          : The following profiles are active: pro
+2021-08-15 10:22:42.858  INFO 4580 --- [main] com.star.MyblogApplicationTests          : Started MyblogApplicationTests in 6.08 seconds (JVM running for 7.538)

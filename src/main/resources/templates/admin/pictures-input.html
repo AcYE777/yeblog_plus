@@ -28,7 +28,7 @@
     <div class="ui container">
       <form action="#" method="post" th:action="*{id}==null ? @{/admin/pictures} : @{/admin/pictures/{id}(id=*{id})} " th:object="${picture}" class="ui form">
         <input type="hidden" name="id" th:value="*{id}">
-        <div class=" field">
+        <div class="field">
           <div class="ui left labeled input m-margin-top">
             <label class="ui teal basic label">图片名称</label>
             <input type="text" name="picturename" placeholder="图片名称" th:value="*{picturename}">
@@ -49,10 +49,10 @@
 
         <div class="ui error message"></div>
         <!--/*/
-          <div class="ui negative message" th:if="${#fields.hasErrors('picturename')}">
+          <div class="ui negative message" th:if="${#fields.hasErrors('pictureaddress')}">
             <i class="close icon"></i>
             <div class="header">验证失败</div>
-            <p th:errors="*{picturename}">提交信息不符合规则</p>
+            <p th:errors="*{pictureaddress}">提交信息不符合规则</p>
           </div>
         /*/-->
         <div class="ui right aligned container">
@@ -136,7 +136,7 @@
     $('.ui.form').form({
       fields : {
         title : {
-          identifier: 'pictureaddress',
+          identifier: 'pictureaddress1',
           rules: [{
             type : 'empty',
             prompt: '请输入照片地址'

@@ -1,0 +1,301 @@
+2021-08-16 23:30:55.622  INFO 8284 --- [restartedMain] com.star.MyblogApplication               : Starting MyblogApplication on PC-20170517RPEF with PID 8284 (started by Administrator in D:\maven\springboot\github项目资源\myblog-mybatis-master)
+2021-08-16 23:30:55.632  INFO 8284 --- [restartedMain] com.star.MyblogApplication               : The following profiles are active: pro
+2021-08-16 23:31:00.109  INFO 8284 --- [restartedMain] com.star.MyblogApplication               : Started MyblogApplication in 5.399 seconds (JVM running for 6.44)
+2021-08-16 23:31:24.056  INFO 8284 --- [http-nio-8081-exec-1] com.star.aspect.LogAspect                : Request : {url='http://localhost:8081/', ip='127.0.0.1', classMethod='com.star.controller.IndexController.index', args=[{}, 1, {}]}
+2021-08-16 23:31:39.727  INFO 8284 --- [http-nio-8081-exec-1] com.star.aspect.LogAspect                : Result : index
+2021-08-16 23:31:40.890  INFO 8284 --- [http-nio-8081-exec-10] com.star.aspect.LogAspect                : Request : {url='http://localhost:8081/footer/blogmessage', ip='127.0.0.1', classMethod='com.star.controller.IndexController.blogMessage', args=[{}]}
+2021-08-16 23:31:40.997  INFO 8284 --- [http-nio-8081-exec-10] com.star.aspect.LogAspect                : Result : commons/footer :: blogMessage
+2021-08-16 23:31:49.359  INFO 8284 --- [http-nio-8081-exec-5] com.star.aspect.LogAspect                : Request : {url='http://localhost:8081/footer/blogmessage', ip='127.0.0.1', classMethod='com.star.controller.IndexController.blogMessage', args=[{}]}
+2021-08-16 23:31:49.498  INFO 8284 --- [http-nio-8081-exec-5] com.star.aspect.LogAspect                : Result : commons/footer :: blogMessage
+2021-08-16 23:31:51.319  INFO 8284 --- [http-nio-8081-exec-8] com.star.aspect.LogAspect                : Request : {url='http://localhost:8081/footer/blogmessage', ip='127.0.0.1', classMethod='com.star.controller.IndexController.blogMessage', args=[{}]}
+2021-08-16 23:31:51.405  INFO 8284 --- [http-nio-8081-exec-8] com.star.aspect.LogAspect                : Result : commons/footer :: blogMessage
+2021-08-16 23:31:51.674  INFO 8284 --- [http-nio-8081-exec-5] com.star.aspect.LogAspect                : Request : {url='http://localhost:8081/footer/blogmessage', ip='127.0.0.1', classMethod='com.star.controller.IndexController.blogMessage', args=[{}]}
+2021-08-16 23:31:51.758  INFO 8284 --- [http-nio-8081-exec-5] com.star.aspect.LogAspect                : Result : commons/footer :: blogMessage
+2021-08-16 23:31:54.793  INFO 8284 --- [http-nio-8081-exec-8] com.star.aspect.LogAspect                : Request : {url='http://localhost:8081/footer/blogmessage', ip='127.0.0.1', classMethod='com.star.controller.IndexController.blogMessage', args=[{}]}
+2021-08-16 23:31:54.898  INFO 8284 --- [http-nio-8081-exec-8] com.star.aspect.LogAspect                : Result : commons/footer :: blogMessage
+2021-08-16 23:32:45.662  INFO 6384 --- [restartedMain] com.star.MyblogApplication               : Starting MyblogApplication on PC-20170517RPEF with PID 6384 (started by Administrator in D:\maven\springboot\github项目资源\myblog-mybatis-master)
+2021-08-16 23:32:45.666  INFO 6384 --- [restartedMain] com.star.MyblogApplication               : The following profiles are active: pro
+2021-08-16 23:32:49.716  INFO 6384 --- [restartedMain] com.star.MyblogApplication               : Started MyblogApplication in 4.839 seconds (JVM running for 5.832)
+2021-08-16 23:33:00.596  INFO 6384 --- [http-nio-8081-exec-10] com.star.aspect.LogAspect                : Request : {url='http://localhost:8081/footer/blogmessage', ip='127.0.0.1', classMethod='com.star.controller.IndexController.blogMessage', args=[{}]}
+2021-08-16 23:33:00.700  INFO 6384 --- [http-nio-8081-exec-10] com.star.aspect.LogAspect                : Result : commons/footer :: blogMessage
+2021-08-16 23:33:01.846  INFO 6384 --- [http-nio-8081-exec-5] com.star.aspect.LogAspect                : Request : {url='http://localhost:8081/footer/blogmessage', ip='127.0.0.1', classMethod='com.star.controller.IndexController.blogMessage', args=[{}]}
+2021-08-16 23:33:01.938  INFO 6384 --- [http-nio-8081-exec-5] com.star.aspect.LogAspect                : Result : commons/footer :: blogMessage
+2021-08-16 23:33:02.998  INFO 6384 --- [http-nio-8081-exec-10] com.star.aspect.LogAspect                : Request : {url='http://localhost:8081/footer/blogmessage', ip='127.0.0.1', classMethod='com.star.controller.IndexController.blogMessage', args=[{}]}
+2021-08-16 23:33:03.115  INFO 6384 --- [http-nio-8081-exec-10] com.star.aspect.LogAspect                : Result : commons/footer :: blogMessage
+2021-08-16 23:33:04.178  INFO 6384 --- [http-nio-8081-exec-5] com.star.aspect.LogAspect                : Request : {url='http://localhost:8081/footer/blogmessage', ip='127.0.0.1', classMethod='com.star.controller.IndexController.blogMessage', args=[{}]}
+2021-08-16 23:33:04.295  INFO 6384 --- [http-nio-8081-exec-5] com.star.aspect.LogAspect                : Result : commons/footer :: blogMessage
+2021-08-16 23:33:40.126  INFO 6384 --- [http-nio-8081-exec-7] com.star.aspect.LogAspect                : Request : {url='http://localhost:8081/footer/blogmessage', ip='127.0.0.1', classMethod='com.star.controller.IndexController.blogMessage', args=[{}]}
+2021-08-16 23:33:40.219  INFO 6384 --- [http-nio-8081-exec-7] com.star.aspect.LogAspect                : Result : commons/footer :: blogMessage
+2021-08-16 23:33:47.055  INFO 6384 --- [http-nio-8081-exec-4] com.star.aspect.LogAspect                : Request : {url='http://localhost:8081/footer/blogmessage', ip='127.0.0.1', classMethod='com.star.controller.IndexController.blogMessage', args=[{}]}
+2021-08-16 23:33:47.150  INFO 6384 --- [http-nio-8081-exec-4] com.star.aspect.LogAspect                : Result : commons/footer :: blogMessage
+2021-08-16 23:41:55.132  INFO 10024 --- [restartedMain] com.star.MyblogApplication               : Starting MyblogApplication on PC-20170517RPEF with PID 10024 (started by Administrator in D:\maven\springboot\github项目资源\myblog-mybatis-master)
+2021-08-16 23:41:55.136  INFO 10024 --- [restartedMain] com.star.MyblogApplication               : The following profiles are active: pro
+2021-08-16 23:41:59.150  INFO 10024 --- [restartedMain] com.star.MyblogApplication               : Started MyblogApplication in 4.795 seconds (JVM running for 5.855)
+2021-08-16 23:42:05.367  INFO 10024 --- [http-nio-8081-exec-10] com.star.aspect.LogAspect                : Request : {url='http://localhost:8081/footer/blogmessage', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.blogMessage', args=[{}]}
+2021-08-16 23:42:05.479  INFO 10024 --- [http-nio-8081-exec-10] com.star.aspect.LogAspect                : Result : commons/footer :: blogMessage
+2021-08-16 23:42:07.526  INFO 10024 --- [http-nio-8081-exec-5] com.star.aspect.LogAspect                : Request : {url='http://localhost:8081/footer/blogmessage', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.blogMessage', args=[{}]}
+2021-08-16 23:42:07.622  INFO 10024 --- [http-nio-8081-exec-5] com.star.aspect.LogAspect                : Result : commons/footer :: blogMessage
+2021-08-16 23:42:08.464  INFO 10024 --- [http-nio-8081-exec-10] com.star.aspect.LogAspect                : Request : {url='http://localhost:8081/footer/blogmessage', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.blogMessage', args=[{}]}
+2021-08-16 23:42:08.582  INFO 10024 --- [http-nio-8081-exec-10] com.star.aspect.LogAspect                : Result : commons/footer :: blogMessage
+2021-08-16 23:42:09.647  INFO 10024 --- [http-nio-8081-exec-5] com.star.aspect.LogAspect                : Request : {url='http://localhost:8081/footer/blogmessage', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.blogMessage', args=[{}]}
+2021-08-16 23:42:09.765  INFO 10024 --- [http-nio-8081-exec-5] com.star.aspect.LogAspect                : Result : commons/footer :: blogMessage
+2021-08-16 23:42:48.038  INFO 1412 --- [restartedMain] com.star.MyblogApplication               : Starting MyblogApplication on PC-20170517RPEF with PID 1412 (started by Administrator in D:\maven\springboot\github项目资源\myblog-mybatis-master)
+2021-08-16 23:42:48.041  INFO 1412 --- [restartedMain] com.star.MyblogApplication               : The following profiles are active: pro
+2021-08-16 23:42:51.968  INFO 1412 --- [restartedMain] com.star.MyblogApplication               : Started MyblogApplication in 4.607 seconds (JVM running for 5.569)
+2021-08-16 23:42:56.359  INFO 1412 --- [http-nio-8081-exec-10] com.star.aspect.LogAspect                : Request : {url='http://localhost:8081/footer/blogmessage', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.blogMessage', args=[{}]}
+2021-08-16 23:42:56.480  INFO 1412 --- [http-nio-8081-exec-10] com.star.aspect.LogAspect                : Result : commons/footer :: blogMessage
+2021-08-16 23:42:57.575  INFO 1412 --- [http-nio-8081-exec-5] com.star.aspect.LogAspect                : Request : {url='http://localhost:8081/footer/blogmessage', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.blogMessage', args=[{}]}
+2021-08-16 23:42:57.690  INFO 1412 --- [http-nio-8081-exec-5] com.star.aspect.LogAspect                : Result : commons/footer :: blogMessage
+2021-08-16 23:42:58.395  INFO 1412 --- [http-nio-8081-exec-10] com.star.aspect.LogAspect                : Request : {url='http://localhost:8081/footer/blogmessage', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.blogMessage', args=[{}]}
+2021-08-16 23:42:58.528  INFO 1412 --- [http-nio-8081-exec-10] com.star.aspect.LogAspect                : Result : commons/footer :: blogMessage
+2021-08-16 23:42:59.290  INFO 1412 --- [http-nio-8081-exec-5] com.star.aspect.LogAspect                : Request : {url='http://localhost:8081/footer/blogmessage', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.blogMessage', args=[{}]}
+2021-08-16 23:42:59.423  INFO 1412 --- [http-nio-8081-exec-5] com.star.aspect.LogAspect                : Result : commons/footer :: blogMessage
+2021-08-16 23:43:35.801  INFO 8456 --- [restartedMain] com.star.MyblogApplication               : Starting MyblogApplication on PC-20170517RPEF with PID 8456 (started by Administrator in D:\maven\springboot\github项目资源\myblog-mybatis-master)
+2021-08-16 23:43:35.806  INFO 8456 --- [restartedMain] com.star.MyblogApplication               : The following profiles are active: pro
+2021-08-16 23:43:39.854  INFO 8456 --- [restartedMain] com.star.MyblogApplication               : Started MyblogApplication in 4.818 seconds (JVM running for 5.904)
+2021-08-16 23:43:49.024  INFO 8456 --- [http-nio-8081-exec-10] com.star.aspect.LogAspect                : Request : {url='http://localhost:8081/footer/blogmessage', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.blogMessage', args=[{}]}
+2021-08-16 23:43:49.119  INFO 8456 --- [http-nio-8081-exec-10] com.star.aspect.LogAspect                : Result : commons/footer :: blogMessage
+2021-08-16 23:43:50.151  INFO 8456 --- [http-nio-8081-exec-5] com.star.aspect.LogAspect                : Request : {url='http://localhost:8081/footer/blogmessage', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.blogMessage', args=[{}]}
+2021-08-16 23:43:50.247  INFO 8456 --- [http-nio-8081-exec-5] com.star.aspect.LogAspect                : Result : commons/footer :: blogMessage
+2021-08-16 23:43:51.016  INFO 8456 --- [http-nio-8081-exec-10] com.star.aspect.LogAspect                : Request : {url='http://localhost:8081/footer/blogmessage', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.blogMessage', args=[{}]}
+2021-08-16 23:43:51.125  INFO 8456 --- [http-nio-8081-exec-10] com.star.aspect.LogAspect                : Result : commons/footer :: blogMessage
+2021-08-16 23:44:05.140  INFO 8936 --- [restartedMain] com.star.MyblogApplication               : Starting MyblogApplication on PC-20170517RPEF with PID 8936 (started by Administrator in D:\maven\springboot\github项目资源\myblog-mybatis-master)
+2021-08-16 23:44:05.144  INFO 8936 --- [restartedMain] com.star.MyblogApplication               : The following profiles are active: pro
+2021-08-16 23:44:09.071  INFO 8936 --- [restartedMain] com.star.MyblogApplication               : Started MyblogApplication in 4.699 seconds (JVM running for 5.654)
+2021-08-16 23:44:12.913  INFO 8936 --- [http-nio-8081-exec-10] com.star.aspect.LogAspect                : Request : {url='http://localhost:8081/footer/blogmessage', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.blogMessage', args=[{}]}
+2021-08-16 23:44:13.028  INFO 8936 --- [http-nio-8081-exec-10] com.star.aspect.LogAspect                : Result : commons/footer :: blogMessage
+2021-08-16 23:44:13.979  INFO 8936 --- [http-nio-8081-exec-5] com.star.aspect.LogAspect                : Request : {url='http://localhost:8081/footer/blogmessage', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.blogMessage', args=[{}]}
+2021-08-16 23:44:14.079  INFO 8936 --- [http-nio-8081-exec-5] com.star.aspect.LogAspect                : Result : commons/footer :: blogMessage
+2021-08-16 23:44:14.996  INFO 8936 --- [http-nio-8081-exec-10] com.star.aspect.LogAspect                : Request : {url='http://localhost:8081/footer/blogmessage', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.blogMessage', args=[{}]}
+2021-08-16 23:44:15.121  INFO 8936 --- [http-nio-8081-exec-10] com.star.aspect.LogAspect                : Result : commons/footer :: blogMessage
+2021-08-16 23:44:15.922  INFO 8936 --- [http-nio-8081-exec-5] com.star.aspect.LogAspect                : Request : {url='http://localhost:8081/footer/blogmessage', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.blogMessage', args=[{}]}
+2021-08-16 23:44:16.083  INFO 8936 --- [http-nio-8081-exec-5] com.star.aspect.LogAspect                : Result : commons/footer :: blogMessage
+2021-08-16 23:44:19.095  INFO 8936 --- [http-nio-8081-exec-10] com.star.aspect.LogAspect                : Request : {url='http://localhost:8081/footer/blogmessage', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.blogMessage', args=[{}]}
+2021-08-16 23:44:19.221  INFO 8936 --- [http-nio-8081-exec-10] com.star.aspect.LogAspect                : Result : commons/footer :: blogMessage
+2021-08-16 23:45:09.664  INFO 5624 --- [restartedMain] com.star.MyblogApplication               : Starting MyblogApplication on PC-20170517RPEF with PID 5624 (started by Administrator in D:\maven\springboot\github项目资源\myblog-mybatis-master)
+2021-08-16 23:45:09.668  INFO 5624 --- [restartedMain] com.star.MyblogApplication               : The following profiles are active: pro
+2021-08-16 23:45:13.820  INFO 5624 --- [restartedMain] com.star.MyblogApplication               : Started MyblogApplication in 4.967 seconds (JVM running for 6.002)
+2021-08-16 23:45:21.014  INFO 5624 --- [http-nio-8081-exec-10] com.star.aspect.LogAspect                : Request : {url='http://localhost:8081/footer/blogmessage', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.blogMessage', args=[{}]}
+2021-08-16 23:45:21.108  INFO 5624 --- [http-nio-8081-exec-10] com.star.aspect.LogAspect                : Result : commons/footer :: blogMessage
+2021-08-16 23:45:22.259  INFO 5624 --- [http-nio-8081-exec-5] com.star.aspect.LogAspect                : Request : {url='http://localhost:8081/footer/blogmessage', ip='0:0:0:0:0:0:0:1', classMethod='com.star.controller.IndexController.blogMessage', args=[{}]}
+2021-08-16 23:45:22.342  INFO 5624 --- [http-nio-8081-exec-5] com.star.aspect.LogAspect                : Result : commons/footer :: blogMessage
+2021-08-16 23:45:23.737 ERROR 5624 --- [http-nio-8081-exec-6] org.thymeleaf.TemplateEngine             : [THYMELEAF][http-nio-8081-exec-6] Exception processing template "admin/pictures-input": An error happened during template parsing (template: "class path resource [templates/admin/pictures-input.html]")
+
+org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates/admin/pictures-input.html]")
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:241)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072)
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:362)
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:189)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1373)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1118)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1057)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1639)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.attoparser.ParseException: Exception evaluating SpringEL expression: "#fields.hasErrors('pictureaddress1')" (template: "admin/pictures-input" - line 52, col 44)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:393)
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230)
+	... 48 common frames omitted
+Caused by: org.thymeleaf.exceptions.TemplateProcessingException: Exception evaluating SpringEL expression: "#fields.hasErrors('pictureaddress1')" (template: "admin/pictures-input" - line 52, col 44)
+	at org.thymeleaf.spring5.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:290)
+	at org.thymeleaf.standard.expression.VariableExpression.executeVariableExpression(VariableExpression.java:166)
+	at org.thymeleaf.standard.expression.SimpleExpression.executeSimple(SimpleExpression.java:66)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:109)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:138)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:125)
+	at org.thymeleaf.standard.processor.StandardIfTagProcessor.isVisible(StandardIfTagProcessor.java:59)
+	at org.thymeleaf.standard.processor.AbstractStandardConditionalVisibilityTagProcessor.doProcess(AbstractStandardConditionalVisibilityTagProcessor.java:61)
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74)
+	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95)
+	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633)
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleOpenElement(ProcessorTemplateHandler.java:1314)
+	at org.thymeleaf.engine.TemplateHandlerAdapterMarkupHandler.handleOpenElementEnd(TemplateHandlerAdapterMarkupHandler.java:304)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler$InlineMarkupAdapterPreProcessorHandler.handleOpenElementEnd(InlinedOutputExpressionMarkupHandler.java:278)
+	at org.thymeleaf.standard.inline.OutputExpressionInlinePreProcessorHandler.handleOpenElementEnd(OutputExpressionInlinePreProcessorHandler.java:186)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler.handleOpenElementEnd(InlinedOutputExpressionMarkupHandler.java:124)
+	at org.attoparser.HtmlElement.handleOpenElementEnd(HtmlElement.java:109)
+	at org.attoparser.HtmlMarkupHandler.handleOpenElementEnd(HtmlMarkupHandler.java:297)
+	at org.attoparser.MarkupEventProcessorHandler.handleOpenElementEnd(MarkupEventProcessorHandler.java:402)
+	at org.attoparser.ParsingElementMarkupUtil.parseOpenElement(ParsingElementMarkupUtil.java:159)
+	at org.attoparser.MarkupParser.parseBuffer(MarkupParser.java:710)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:301)
+	... 50 common frames omitted
+Caused by: org.springframework.beans.NotReadablePropertyException: Invalid property 'pictureaddress1' of bean class [com.star.entity.Picture]: Bean property 'pictureaddress1' is not readable or has an invalid getter method: Does the return type of the getter match the parameter type of the setter?
+	at org.springframework.beans.AbstractNestablePropertyAccessor.getPropertyValue(AbstractNestablePropertyAccessor.java:622)
+	at org.springframework.beans.AbstractNestablePropertyAccessor.getPropertyValue(AbstractNestablePropertyAccessor.java:612)
+	at org.springframework.validation.AbstractPropertyBindingResult.getActualFieldValue(AbstractPropertyBindingResult.java:104)
+	at org.springframework.validation.AbstractBindingResult.getFieldValue(AbstractBindingResult.java:228)
+	at org.springframework.web.servlet.support.BindStatus.<init>(BindStatus.java:129)
+	at org.springframework.web.servlet.support.RequestContext.getBindStatus(RequestContext.java:903)
+	at org.thymeleaf.spring5.context.webmvc.SpringWebMvcThymeleafRequestContext.getBindStatus(SpringWebMvcThymeleafRequestContext.java:227)
+	at org.thymeleaf.spring5.util.FieldUtils.getBindStatusFromParsedExpression(FieldUtils.java:306)
+	at org.thymeleaf.spring5.util.FieldUtils.getBindStatus(FieldUtils.java:253)
+	at org.thymeleaf.spring5.util.FieldUtils.getBindStatus(FieldUtils.java:227)
+	at org.thymeleaf.spring5.util.FieldUtils.checkErrors(FieldUtils.java:212)
+	at org.thymeleaf.spring5.util.FieldUtils.hasErrors(FieldUtils.java:71)
+	at org.thymeleaf.spring5.expression.Fields.hasErrors(Fields.java:58)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.expression.spel.support.ReflectiveMethodExecutor.execute(ReflectiveMethodExecutor.java:129)
+	at org.springframework.expression.spel.ast.MethodReference.getValueInternal(MethodReference.java:139)
+	at org.springframework.expression.spel.ast.MethodReference.access$000(MethodReference.java:55)
+	at org.springframework.expression.spel.ast.MethodReference$MethodValueRef.getValue(MethodReference.java:386)
+	at org.springframework.expression.spel.ast.CompoundExpression.getValueInternal(CompoundExpression.java:92)
+	at org.springframework.expression.spel.ast.SpelNodeImpl.getValue(SpelNodeImpl.java:112)
+	at org.springframework.expression.spel.standard.SpelExpression.getValue(SpelExpression.java:337)
+	at org.thymeleaf.spring5.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:263)
+	... 71 common frames omitted
+
+2021-08-16 23:45:23.741 ERROR 5624 --- [http-nio-8081-exec-6] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates/admin/pictures-input.html]")] with root cause
+
+org.springframework.beans.NotReadablePropertyException: Invalid property 'pictureaddress1' of bean class [com.star.entity.Picture]: Bean property 'pictureaddress1' is not readable or has an invalid getter method: Does the return type of the getter match the parameter type of the setter?
+	at org.springframework.beans.AbstractNestablePropertyAccessor.getPropertyValue(AbstractNestablePropertyAccessor.java:622)
+	at org.springframework.beans.AbstractNestablePropertyAccessor.getPropertyValue(AbstractNestablePropertyAccessor.java:612)
+	at org.springframework.validation.AbstractPropertyBindingResult.getActualFieldValue(AbstractPropertyBindingResult.java:104)
+	at org.springframework.validation.AbstractBindingResult.getFieldValue(AbstractBindingResult.java:228)
+	at org.springframework.web.servlet.support.BindStatus.<init>(BindStatus.java:129)
+	at org.springframework.web.servlet.support.RequestContext.getBindStatus(RequestContext.java:903)
+	at org.thymeleaf.spring5.context.webmvc.SpringWebMvcThymeleafRequestContext.getBindStatus(SpringWebMvcThymeleafRequestContext.java:227)
+	at org.thymeleaf.spring5.util.FieldUtils.getBindStatusFromParsedExpression(FieldUtils.java:306)
+	at org.thymeleaf.spring5.util.FieldUtils.getBindStatus(FieldUtils.java:253)
+	at org.thymeleaf.spring5.util.FieldUtils.getBindStatus(FieldUtils.java:227)
+	at org.thymeleaf.spring5.util.FieldUtils.checkErrors(FieldUtils.java:212)
+	at org.thymeleaf.spring5.util.FieldUtils.hasErrors(FieldUtils.java:71)
+	at org.thymeleaf.spring5.expression.Fields.hasErrors(Fields.java:58)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.expression.spel.support.ReflectiveMethodExecutor.execute(ReflectiveMethodExecutor.java:129)
+	at org.springframework.expression.spel.ast.MethodReference.getValueInternal(MethodReference.java:139)
+	at org.springframework.expression.spel.ast.MethodReference.access$000(MethodReference.java:55)
+	at org.springframework.expression.spel.ast.MethodReference$MethodValueRef.getValue(MethodReference.java:386)
+	at org.springframework.expression.spel.ast.CompoundExpression.getValueInternal(CompoundExpression.java:92)
+	at org.springframework.expression.spel.ast.SpelNodeImpl.getValue(SpelNodeImpl.java:112)
+	at org.springframework.expression.spel.standard.SpelExpression.getValue(SpelExpression.java:337)
+	at org.thymeleaf.spring5.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:263)
+	at org.thymeleaf.standard.expression.VariableExpression.executeVariableExpression(VariableExpression.java:166)
+	at org.thymeleaf.standard.expression.SimpleExpression.executeSimple(SimpleExpression.java:66)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:109)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:138)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:125)
+	at org.thymeleaf.standard.processor.StandardIfTagProcessor.isVisible(StandardIfTagProcessor.java:59)
+	at org.thymeleaf.standard.processor.AbstractStandardConditionalVisibilityTagProcessor.doProcess(AbstractStandardConditionalVisibilityTagProcessor.java:61)
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74)
+	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95)
+	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633)
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleOpenElement(ProcessorTemplateHandler.java:1314)
+	at org.thymeleaf.engine.TemplateHandlerAdapterMarkupHandler.handleOpenElementEnd(TemplateHandlerAdapterMarkupHandler.java:304)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler$InlineMarkupAdapterPreProcessorHandler.handleOpenElementEnd(InlinedOutputExpressionMarkupHandler.java:278)
+	at org.thymeleaf.standard.inline.OutputExpressionInlinePreProcessorHandler.handleOpenElementEnd(OutputExpressionInlinePreProcessorHandler.java:186)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler.handleOpenElementEnd(InlinedOutputExpressionMarkupHandler.java:124)
+	at org.attoparser.HtmlElement.handleOpenElementEnd(HtmlElement.java:109)
+	at org.attoparser.HtmlMarkupHandler.handleOpenElementEnd(HtmlMarkupHandler.java:297)
+	at org.attoparser.MarkupEventProcessorHandler.handleOpenElementEnd(MarkupEventProcessorHandler.java:402)
+	at org.attoparser.ParsingElementMarkupUtil.parseOpenElement(ParsingElementMarkupUtil.java:159)
+	at org.attoparser.MarkupParser.parseBuffer(MarkupParser.java:710)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:301)
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072)
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:362)
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:189)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1373)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1118)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1057)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1639)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+2021-08-16 23:45:41.917  INFO 7460 --- [restartedMain] com.star.MyblogApplication               : Starting MyblogApplication on PC-20170517RPEF with PID 7460 (started by Administrator in D:\maven\springboot\github项目资源\myblog-mybatis-master)
+2021-08-16 23:45:41.921  INFO 7460 --- [restartedMain] com.star.MyblogApplication               : The following profiles are active: pro
+2021-08-16 23:45:45.866  INFO 7460 --- [restartedMain] com.star.MyblogApplication               : Started MyblogApplication in 4.69 seconds (JVM running for 5.68)
+2021-08-16 23:45:50.424  INFO 7460 --- [http-nio-8081-exec-10] com.star.aspect.LogAspect                : Request : {url='http://localhost:8081/footer/blogmessage', ip='127.0.0.1', classMethod='com.star.controller.IndexController.blogMessage', args=[{}]}
+2021-08-16 23:45:50.530  INFO 7460 --- [http-nio-8081-exec-10] com.star.aspect.LogAspect                : Result : commons/footer :: blogMessage
+2021-08-16 23:45:51.670  INFO 7460 --- [http-nio-8081-exec-5] com.star.aspect.LogAspect                : Request : {url='http://localhost:8081/footer/blogmessage', ip='127.0.0.1', classMethod='com.star.controller.IndexController.blogMessage', args=[{}]}
+2021-08-16 23:45:51.764  INFO 7460 --- [http-nio-8081-exec-5] com.star.aspect.LogAspect                : Result : commons/footer :: blogMessage
+2021-08-16 23:45:53.637  INFO 7460 --- [http-nio-8081-exec-10] com.star.aspect.LogAspect                : Request : {url='http://localhost:8081/footer/blogmessage', ip='127.0.0.1', classMethod='com.star.controller.IndexController.blogMessage', args=[{}]}
+2021-08-16 23:45:53.753  INFO 7460 --- [http-nio-8081-exec-10] com.star.aspect.LogAspect                : Result : commons/footer :: blogMessage
+2021-08-16 23:45:54.438  INFO 7460 --- [http-nio-8081-exec-5] com.star.aspect.LogAspect                : Request : {url='http://localhost:8081/footer/blogmessage', ip='127.0.0.1', classMethod='com.star.controller.IndexController.blogMessage', args=[{}]}
+2021-08-16 23:45:54.553  INFO 7460 --- [http-nio-8081-exec-5] com.star.aspect.LogAspect                : Result : commons/footer :: blogMessage

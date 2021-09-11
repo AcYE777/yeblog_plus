@@ -13,10 +13,8 @@ import java.util.Arrays;
 
 /**
  * @Description: 日志切面处理
- * @Author: ONESTAR
- * @Date: Created in 16:18 2020/3/25
- * @QQ: 316392836
- * @URL: http://122.51.28.187:8080/
+ * @Author: ye
+ * @Date: Created in 16:18 2021/8/13
  */
 @Aspect
 @Component

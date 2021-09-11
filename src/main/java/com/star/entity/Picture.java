@@ -1,18 +1,21 @@
 package com.star.entity;
 
+import javax.validation.constraints.NotBlank;
+
 /**
  * @Description: 照片墙实体类
- * @Author: ONESTAR
- * @Date: Created in 9:27 2020/3/26
- * @QQ群: 530311074
- * @URL: https://onestar.newstar.net.cn/
+ * @Author: ye
+ * @Date: Created in 9:27 2021/8/16
  */
 public class Picture {
 
     private Long id;
     private String picturename;
     private String picturetime;
+
+    @NotBlank(message = "照片地址不能为空")
     private String pictureaddress;
+
     private String picturedescription;
 
     public Picture() {
