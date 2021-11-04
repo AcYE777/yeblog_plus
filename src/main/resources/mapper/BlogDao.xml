@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.star.dao.BlogDao">
+<mapper namespace="com.gy.dao.BlogDao">
 
-    <resultMap id="User" type="com.star.entity.User">
+    <resultMap id="User" type="com.gy.entity.User">
         <id property="id" column="id"/>
         <result property="nickname" column="nickname"/>
         <result property="username" column="username"/>
@@ -10,7 +10,7 @@
         <result property="avatar" column="avatar"/>
     </resultMap>
 
-    <resultMap id="blog" type="com.star.queryvo.BlogQuery">
+    <resultMap id="blog" type="com.gy.queryvo.BlogQuery">
         <id property="id" column="id"/>
         <result property="title" column="title"/>
         <result property="updateTime" column="update_time"/>
@@ -24,7 +24,7 @@
     </resultMap>
 
     <!--新增保存文章-->
-    <insert id="saveBlog" parameterType="com.star.entity.Blog">
+    <insert id="saveBlog" parameterType="com.gy.entity.Blog">
         insert into t_blog (id,title, content, first_picture, flag,
         views, comment_count, appreciation, share_statement, commentabled, published,
         recommend, create_time, update_time, type_id, user_id, description)
@@ -34,7 +34,7 @@
     </insert>
 
     <!--查询所有文章-->
-    <select id="getAllBlog" resultType="com.star.entity.Blog">
+    <select id="getAllBlog" resultType="com.gy.entity.Blog">
         select * from t_blog
     </select>
 
@@ -58,7 +58,7 @@
     </delete>
 
 
-    <resultMap id="showblog" type="com.star.queryvo.ShowBlog">
+    <resultMap id="showblog" type="com.gy.queryvo.ShowBlog">
         <id property="id" column="id"/>
         <result property="flag" column="flag"/>
         <result property="title" column="title"/>
@@ -72,6 +72,7 @@
         <result property="appreciation" column="appreciation"/>
         <result property="commentabled" column="commentabled"/>
         <result property="updateTime" column="update_time"/>
+        <result property="pay" column="pay"></result>
     </resultMap>
 
     <!--查询编辑修改文章-->
@@ -88,12 +89,14 @@
         b.published,
         b.share_statement,
         b.appreciation,
-        b.commentabled from t_blog b
+        b.commentabled,
+        b.pay
+        from t_blog b
         where  b.id = #{id};
     </select>
 
     <!--编辑修改文章-->
-    <update id="updateBlog" parameterType="com.star.queryvo.ShowBlog">
+    <update id="updateBlog" parameterType="com.gy.queryvo.ShowBlog">
         update t_blog set
         published=#{published},
         flag=#{flag} ,
@@ -111,7 +114,7 @@
     </update>
 
 
-    <select id="searchByTitleOrTypeOrRecommend" parameterType="com.star.queryvo.SearchBlog" resultMap="blog">
+    <select id="searchByTitleOrTypeOrRecommend" parameterType="com.gy.queryvo.SearchBlog" resultMap="blog">
         <bind name="pattern" value="'%' + title + '%'" />
         select
         b.id,
@@ -135,7 +138,7 @@
         </where>
     </select>
 
-    <resultMap id="firstPageBlog" type="com.star.queryvo.FirstPageBlog">
+    <resultMap id="firstPageBlog" type="com.gy.queryvo.FirstPageBlog">
         <id property="id" column="id"/>
         <result property="title" column="title"/>
         <result property="firstPicture" column="first_picture"/>
@@ -163,11 +166,28 @@
         u.nickname,
         u.avatar
         from t_blog b,t_type t,t_user u
-        where b.type_id = t.id and u.id = b.user_id
+        where b.type_id = t.id and u.id = b.user_id and b.pay = false
         order by b.update_time desc
     </select>
 
-    <resultMap id="recommendBlog" type="com.star.queryvo.RecommendBlog">
+    <select id="getVipBlog" resultMap="firstPageBlog">
+        select
+        b.id,
+        b.title,
+        b.first_picture,
+        b.views,
+        b.comment_count,
+        b.update_time,
+        b.description,
+        t.name,
+        u.nickname,
+        u.avatar
+        from t_blog b,t_type t,t_user u
+        where b.type_id = t.id and u.id = b.user_id and b.pay = true
+        order by b.update_time desc
+    </select>
+
+    <resultMap id="recommendBlog" type="com.gy.queryvo.RecommendBlog">
         <id property="id" column="id"/>
         <result property="title" column="title"/>
         <result property="recommend" column="recommend"/>
@@ -176,15 +196,14 @@
 
     <!--最新推荐文章-->
     <select id="getAllRecommendBlog" resultMap="recommendBlog">
-        select * from t_blog
-        where recommend = true
-        order by update_time desc limit 6;
+        select * from t_blog where recommend=true order by update_time desc
+        limit 6
     </select>
 
-    <!--最新文章-->
-    <!--<select id="getNewBlog" resultMap="firstPageBlog">-->
-        <!--select * from t_blog order by t_blog.update_time desc limit 3;-->
-    <!--</select>-->
+<!--    最新文章-->
+<!--    <select id="getNewBlog" resultMap="firstPageBlog">-->
+<!--        select * from t_blog order by t_blog.update_time desc limit 3;-->
+<!--    </select>-->
 
     <!--搜索文章-->
     <select id="getSearchBlog" resultMap="firstPageBlog">
@@ -206,7 +225,7 @@
     </select>
 
 
-    <resultMap id="detailedBlog" type="com.star.queryvo.DetailedBlog">
+    <resultMap id="detailedBlog" type="com.gy.queryvo.DetailedBlog">
         <id property="id" column="id"/>
         <result property="firstPicture" column="first_picture"/>
         <result property="flag" column="flag"/>
@@ -245,7 +264,7 @@
     </select>
 
     <!--文章访问自增-->
-    <update id="updateViews" parameterType="com.star.entity.Blog">
+    <update id="updateViews" parameterType="com.gy.entity.Blog">
         update t_blog b set b.views = b.views+1 where b.id = #{id}
     </update>
 

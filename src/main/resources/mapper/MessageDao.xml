@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.star.dao.MessageDao">
+<mapper namespace="com.gy.dao.MessageDao">
 
     <!--添加留言-->
     <insert id="saveMessage" parameterType="Message">
@@ -9,7 +9,7 @@
     </insert>
 
     <!--查询父级留言-->
-    <select id="findByParentIdNull" resultType="com.star.entity.Message">
+    <select id="findByParentIdNull" resultType="com.gy.entity.Message">
         select *
         from t_message c
         where c.parent_message_id = #{ParentId}
@@ -17,7 +17,7 @@
     </select>
 
     <!--查询一级回复-->
-    <select id="findByParentIdNotNull" resultType="com.star.entity.Message">
+    <select id="findByParentIdNotNull" resultType="com.gy.entity.Message">
         select *
         from t_message c
         where c.parent_message_id = #{id}

@@ -12,7 +12,7 @@ logging:
   file: log/blog-dev.log
 
 mybatis:
-  type-aliases-package: com.star.entity
+  type-aliases-package: com.gy.entity
   mapper-locations: classpath:mapper/*.xml
   configuration:
     map-underscore-to-camel-case: true

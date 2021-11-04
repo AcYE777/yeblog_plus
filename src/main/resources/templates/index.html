@@ -17,11 +17,11 @@
 </head>
 <body>
 <!--导航栏-->
-<div th:replace="commons/nav :: nav-head"></div>
+<div th:replace="commons/nav2 :: nav2-head"></div>
 
 <!--顶部图片-->
 <div class="m-bg-class_outer" style="width: 100%;height: 750px">
-    <img src="../static/images/bg.jpg" th:src="@{/images/bg.jpg}" alt="" class="ui m-bg image" style="width: 100%;height: 100%">
+    <img src="http://yeblog0.oss-cn-beijing.aliyuncs.com/bg.png" alt="" class="ui m-bg image" style="width: 100%;height: 100%">
     <div class="m-bg-class_cover" align="center">
         <div class="m-margin-top-maxx" align="center">
 <!--            <img class="ui circular image" align="center" src="https://www.blog.baidetu.cn/image/headImg/1606064521969.gif" th:src="@{/images/me.jpg}" style="width: 150px;height: 150px;">-->
@@ -60,12 +60,14 @@
         <h5 class="m-font-size-text-init-title">“会将存在的不协调放大得更加明显，问题也就变得更容易解决了。”</h5>
         <div id="waypoint" class="ui m-margin-top-large" align="center">
             <a href="#" th:href="@{/}" class="ui inverted blue circular icon button m-opacity-small m-item item m-mobile-hide m-index-btn" th:classappend="${n==1} ? 'active' : ''"><i class="home icon"></i>首页</a>
+            <a href="#" th:href="@{/vipblog}" class="ui inverted blue circular icon button m-opacity-small m-item item m-mobile-hide" th:classappend="${n==10} ? 'active' : ''"><i class="lock icon"></i>付费博客</a>
             <a href="#" th:href="@{/types/-1}" class="ui inverted blue circular icon button m-opacity-small m-item item m-mobile-hide m-index-btn" th:classappend="${n==2} ? 'active' : ''"><i class="clone outline icon"></i>导航</a>
-            <a href="#" th:href="@{/archives}" class="ui inverted blue circular icon button m-opacity-small m-item item m-mobile-hide" th:classappend="${n==4} ? 'active' : ''"><i class="clock icon"></i>时间段</a>
+            <a href="#" th:href="@{/archives}" class="ui inverted blue circular icon button m-opacity-small m-item item m-mobile-hide" th:classappend="${n==3} ? 'active' : ''"><i class="clock icon"></i>时间段</a>
             <a href="#" th:href="@{/music}" class="ui inverted blue circular icon button m-opacity-small m-item item m-mobile-hide" th:classappend="${n==5} ? 'active' : ''"><i class="music icon"></i>音乐</a>
             <a href="#" th:href="@{/message}" class="ui inverted blue circular icon button m-opacity-small m-item item m-mobile-hide" th:classappend="${n==6} ? 'active' : ''"><i class="book icon"></i>留言</a>
             <a href="#" th:href="@{/friends}" class="ui inverted blue circular icon button m-opacity-small m-item item m-mobile-hide" th:classappend="${n==7} ? 'active' : ''"><i class="pencil alternate icon"></i>协同维护</a>
-            <a href="#" th:href="@{/picture}" class="ui inverted blue circular icon button m-opacity-small m-item item m-mobile-hide" th:classappend="${n==8} ? 'active' : ''"><i class="image icon "></i>照片</a>
+            <a href="#" th:href="@{/picture}" class="ui inverted blue circular icon button m-opacity-small m-item item m-mobile-hide" th:classappend="${n==8} ? 'active' : ''"><i class="image icon"></i>照片</a>
+
 
 
             <a href="#" th:href="@{/about}" class="ui inverted blue circular icon button m-opacity-small m-item item m-mobile-hide" th:classappend="${n==9} ? 'active' : ''"><i class="info icon"></i>关于我</a>
@@ -131,28 +133,28 @@
                     <div class="ui large aligned mobile reversed stackable grid">
                         <!--博文信息-->
                         <div class="eleven wide column ">
-                            <h3 class="ui header" ><a href="#" th:href="@{/blog/{id}(id=${blog.id})}" target="_blank" class="m-black m-title-font" th:text="${blog.title}">大圣，此去欲何?</a></h3>
-                            <p class="m-text m-margin-top-max" th:text="|${blog.description}......|">戴上金箍，没法爱你；放下金箍，没法保护你。我知道上天不会给我第二次机会，曾经我们说好的永远，原来也仅仅只有，十二画，而已。“大圣，此去欲何?”“踏南天，碎凌霄。”“若一去不回……”“便一去不回” 其实很多时候，我们都是有机会的，最后真正放弃的，是我们自己。......</p>
+                            <h3 class="ui header" ><a href="#" th:href="@{/blog/{id}(id=${blog.id})}" target="_blank" class="m-black m-title-font" th:text="${blog.title}"></a></h3>
+                            <p class="m-text m-margin-top-max" th:text="|${blog.description}......|"></p>
                             <div class="ui m-margin-top-max grid">
                                 <div class="eleven wide column">
                                     <div class="ui mini horizontal link list">
                                         <div class="item">
                                             <img src="../static/images/me.jpg" th:src="@{${blog.avatar}}"  alt="" class="ui avatar image">
-                                            <div class="content"><a href="#" th:href="@{/about}" target="_blank" class="header" th:text="${blog.nickname}" >oneStar</a></div>
+                                            <div class="content"><a href="#" th:href="@{/about}" target="_blank" class="header" th:text="${blog.nickname}" ></a></div>
                                         </div>
                                         <div class="item">
-                                            <i class="calendar icon"></i><span th:text="${#dates.format(blog.updateTime,'yyyy-MM-dd')}">2020-01-01</span>
+                                            <i class="calendar icon"></i><span th:text="${#dates.format(blog.updateTime,'yyyy-MM-dd')}"></span>
                                         </div>
                                         <div class="item">
-                                            <i class="eye icon"></i> <span th:text="${blog.views}">2222</span>
+                                            <i class="eye icon"></i> <span th:text="${blog.views}"></span>
                                         </div>
                                         <div class="item">
-                                            <i class="comment outline icon"></i> <span th:text="${blog.commentCount}">2222</span>
+                                            <i class="comment outline icon"></i> <span th:text="${blog.commentCount}"></span>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="right aligned five wide column">
-                                    <a href="#" target="_blank" class="ui teal basic label m-padded-tiny m-text-thin" th:text="${blog.typeName}">好文</a>
+                                    <a href="#" target="_blank" class="ui teal basic label m-padded-tiny m-text-thin" th:text="${blog.typeName}"></a>
                                 </div>
                             </div>
                         </div>

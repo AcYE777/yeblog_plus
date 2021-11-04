@@ -25,6 +25,20 @@
     </properties>
 
     <dependencies>
+
+        <!--添加JSON转换,redis存放list，map集合要用到-->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.78</version>
+        </dependency>
+
+        <!--导入redis的依赖-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
+        </dependency>
+
         <!--thymeleaf模板-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -98,6 +112,22 @@
             <version>1.18.20</version>
             <scope>provided</scope>
         </dependency>
+
+        <!--增加提示配置文件的依赖-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-configuration-processor</artifactId>
+            <optional>true</optional>
+        </dependency>
+
+        <!-- 支付宝sdk -->
+        <dependency>
+            <groupId>com.alipay.sdk</groupId>
+            <artifactId>alipay-sdk-java</artifactId>
+            <version>4.9.28.ALL</version>
+        </dependency>
+
+
     </dependencies>
 
     <build>
@@ -106,7 +136,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <mainClass>com.star.MyblogApplication</mainClass>
+                    <mainClass>com.gy.MyblogApplication</mainClass>
                 </configuration>
             </plugin>
         </plugins>

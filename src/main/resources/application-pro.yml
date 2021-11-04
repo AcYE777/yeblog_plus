@@ -4,18 +4,45 @@ spring:
     url: jdbc:mysql://120.24.249.116:3306/yeblog?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=UTC
     username: root
     password: 007
-
+  redis:
+    host: 120.24.249.116
+    password: "007"
+    port: 6379
+  thymeleaf:
+    cache: false
+  cloud:
+    sms:
+      host: http://fesms.market.alicloudapi.com
+      path: /sms/
+      sign: 1
+      skin: 1
+      appcode: b8d22437882a45a9915c4c2946d9202d
 
 logging:
   level:
     root: warn
-    com.star: info
+    com.star: debug
   file: log/blog-pro.log
 
 mybatis:
-  type-aliases-package: com.star.entity
+  type-aliases-package: com.gy.entity
   mapper-locations: classpath:mapper/*.xml
   configuration:
     map-underscore-to-camel-case: true
 server:
   port: 8080
+
+yeblog:
+  threadpool:
+    coreSize: 20
+    maxSize: 200
+    keepAliveTime: 10
+alipay:
+  sign-type: RSA2
+  charset: utf-8
+  gateway-url: https://openapi.alipaydev.com/gateway.do
+  app-id: 2021000118645967
+  alipay-public-key: MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAslg/3seeV/hIvsS5B93YSAeP9PNepkZv1kWZjpw+HclEOHY5L95yJ67KQL3cn8i7/N7A4sK9o1NKjARj/UgO5N61R2Wlq4f5pCCviYgk5UMwCdV5JgkWSatFtWe2M18JMK3qyKUo6HZ+V0VdkZYUCoIzqfockITOcPPxdMqJy9RJwlW3AZASLYCkToNmwcrHPI2+pvQWgHaWR/7iCXidgt1ntJ62a6VAjzvUGmBc0IJfRn/Frq85X7be1vq82yOtGRw0H078VCCi7aty4Fi3GTBF65usPQxN3hJ2f2iBW81vkzxNVvI0AFQD1xlyz3NQHQjFDTcoFsa1VHsTSumC3QIDAQAB
+  merchant-private-key: MIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCDO6e1DjaeQZNFPikKY+BKFJiRcdIb1IPlGRy1tAZFxk2Ig3KYZ33gn+zijUQuhrLm67OLgDwiAJR0JZqRMRL9I9lCJITXlr5En7AmigWRFT6xAgQj90VpyI1uA6yLN2esNbkPijhu4YWHSKwx50KJ4yYemIgfCBKg7LvzkFN8ekBHdMHUiA1Vv0CRl05hA9HVHc3Ggcmz1apuAuW39SrviBFwN+QVhalEptx8jMr/KgaEzIhEAXRzhG80tPrG0dmaqkDKCckddmUIvAxk41nc7M8LeiFanFHz6JnzenkFr+JG0y3SFHc2J9KsRbzL20EvBsegoJvfCd1yXJr04ZdvAgMBAAECggEAO/yX0240zzBAZkVcszAmRRaXCtzRYwFIbP+GnRQ2Tcywgjc7uaiM5JGV0ZUrVm0h9+ZDwv+R/STwtwq9VaLuACJT3CUfSADS5kFsXqF2m/PvHTBDvkD4TLts0p4BT/26eQBxoEXZN+4EgGtastD4HFllglTM3ApvoXm1DEersdj0Gnwf6EuMV5iauKw/8Y6vpYuJ8SdEJBIoAsOv0ofb/Di378xP4Rqn7m1L4b1TZ+JT1KrHyV9EE3+TSyXQ9kqvuh+egJl1LVNgUr+fNdmC3G/0JOu5+c+i6caVSmBR9GAUDCxu3hGxy/pTca6eoYy3IxyNoNd0eRBT6KzJ0gu14QKBgQDBgz6vDaW9gGpF8mTGvfFoTltoCTQaCCKZfTWnDjWkba7FaaX+OxmwqUF83Eya27B/dpZ0gE2vI4ExDh7vGBJvaYCbD1ST5VUHcLLuJ2w3LK/RthyAiFOGa7u/gi8/svFaGJuUegg8Q8ndGytDU/tT3zrr7KV/MK43HAnEWJ0DPwKBgQCtnA23vupoWXBFV5GNKupomfw/MWbm1o2TdT5mff9bRBEZKG8V/talM5Cybq9A9Fkd2dSEV7hFO77asOmaeEXLPu9plWpOyhwawgDhasskG4EEGBYjAj7XgDKsGadXq9K4t6BD0vIOaPP5LEg3YBKCz0GeWddluWrt8vvZPm7P0QKBgA/tT3F0/Bk2wohzRNwesgnVuSw85a7m0II1jf7r6npYFLRm16SvFJQ3ug4ey6dLQaGcDxITpVEu6OkyslUXdBz7X/xjLKDnlTIBkpiLYhrAcNAf3wStM8Kyh0dh3aWugrLZp6R2zsq3AZxTKiJmfR8QFndoiM6JIS2j/yHL8VBdAoGBAKcPqV+s9vLNRi1kE+stZf6cV1EUH/p4cip4w0BrdMQFXxK/hw46eaDlWxNpUXoG6I7CJC/qHad507GsVk9P95GakVYf8vm4oYzaLXC9jJfFY8RlzT+JFKHZemmEEjVaYd9gzHcX0dguBMA9bYzkBUwdVv6jY5Q+9ffeP54Q5x9RAoGBALtFcnrCHpXH4Dro9OFj//C958o4jqri8KgIuM5z2bTPNd0Rfp6coFfGnc47tll7mgSHdVGrAzBZBEMIGHLxWnzNEBOtK5CucMbU2HnabRtlCwIqvgx7suZ644eXDksD7jhDC7KNUAO2cPVeryMCoVPKiVzg6cJXJIv88BbTTeiq
+  notify-url: http://44u480q895.zicp.vip:11450/chapter1/login_success.jsp
+#  return-url: http://44u480q895.zicp.vip:11450/chapter1/login_success.jsp 需要动态生成

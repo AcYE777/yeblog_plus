@@ -44,11 +44,11 @@
         <tbody>
           <tr align="center" th:each="picture,iterStat : ${pageInfo.list}">
             <td th:text="${iterStat.count}">1</td>
-            <td th:text="${picture.picturename}">东西冲徒步</td>
-            <td th:text="${picture.picturetime}">2019年12月31日 深圳</td>
+            <td th:text="${picture.picturename}"></td>
+            <td th:text="${picture.picturetime}"></td>
             <td>
               <a href="#" th:href="@{/admin/pictures/{id}/input(id=${picture.id})}" class="ui mini teal basic button">编辑</a>
-              <a href="#" th:href="@{/admin/pictures/{id}/delete(id=${picture.id})}" onclick="return confirm('确定要删除该照片吗？三思啊! 删了可就没了！')" class="ui mini red basic button">删除</a>
+              <a href="#" th:href="@{/admin/pictures/{id}/delete(id=${picture.id})}" onclick="return confirm('确定要删除该照片吗？')" class="ui mini red basic button">删除</a>
             </td>
           </tr>
         </tbody>

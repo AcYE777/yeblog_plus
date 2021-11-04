@@ -1,0 +1,4 @@
+2021-10-27 15:07:56.597  INFO 16528 --- [restartedMain] com.gy.MyblogApplication               : Starting MyblogApplication on PC-20170517RPEF with PID 16528 (started by Administrator in D:\maven\springboot\github项目资源\myblog-mybatis-master)
+2021-10-27 15:07:56.608 DEBUG 16528 --- [restartedMain] com.gy.MyblogApplication               : Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2021-10-27 15:07:56.608  INFO 16528 --- [restartedMain] com.gy.MyblogApplication               : The following profiles are active: pro
+2021-10-27 15:08:02.245  INFO 16528 --- [restartedMain] com.gy.MyblogApplication               : Started MyblogApplication in 6.491 seconds (JVM running for 7.777)

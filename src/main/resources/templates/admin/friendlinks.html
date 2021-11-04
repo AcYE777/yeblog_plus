@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>友链管理</title>
+  <title>协同管理</title>
   <link href="../static/images/favicon.ico" th:href="@{/images/me.jpg}" rel="icon" type="image/x-ico">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.css">
   <link rel="stylesheet" href="../../static/css/me.css" th:href="@{/css/me.css}">
@@ -46,14 +46,14 @@
         <tbody>
           <tr align="center" th:each="friendlink,iterStat : ${pageInfo.list}">
             <td th:text="${iterStat.count}">1</td>
-            <td th:text="${friendlink.blogname}">ONESTAR</td>
-            <td th:text="${friendlink.blogaddress}">http://122.51.28.187:8080/</td>
-            <td th:text="${friendlink.pictureaddress}">http://122.51.28.187:8080/</td>
-            <td th:text="${#dates.format(friendlink.createTime,'yyyy-MM-dd HH:mm')}">2020-01-02 09:45</td>
+            <td th:text="${friendlink.blogname}"></td>
+            <td th:text="${friendlink.blogaddress}"></td>
+            <td th:text="${friendlink.pictureaddress}"></td>
+            <td th:text="${#dates.format(friendlink.createTime,'yyyy-MM-dd HH:mm')}"></td>
             <!--th:text="${#dates.format(message.createTime,'yyyy-MM-dd HH:mm')}"-->
             <td>
               <a href="#" th:href="@{/admin/friendlinks/{id}/input(id=${friendlink.id})}" class="ui mini teal basic button">编辑</a>
-              <a href="#" th:href="@{/admin/friendlinks/{id}/delete(id=${friendlink.id})}" onclick="return confirm('确定要删除该友链吗？三思啊! 删了可就没了！')" class="ui mini red basic button">删除</a>
+              <a href="#" th:href="@{/admin/friendlinks/{id}/delete(id=${friendlink.id})}" onclick="return confirm('确定要删除吗?')" class="ui mini red basic button">删除</a>
             </td>
           </tr>
         </tbody>
