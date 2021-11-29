@@ -50,7 +50,8 @@ public class IndexController {
     private StringRedisTemplate redisTemplate;
     //    首页中的分页查询博客列表
     @GetMapping("/")
-    public String index(Model model, @RequestParam(defaultValue = "1", value = "pageNum") Integer pageNum, RedirectAttributes attributes) throws ExecutionException, InterruptedException {
+    public String index(Model model, @RequestParam(defaultValue = "1", value = "pageNum") Integer pageNum, RedirectAttributes attributes)
+            throws ExecutionException, InterruptedException {
         /**
          * 使用异步编排进行优化代码
          */

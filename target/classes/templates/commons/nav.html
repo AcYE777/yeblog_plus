@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--导航-->
+<nav id="nav" class="gird-header m-opacity-small-nav" style="display: none" th:fragment="nav-head">
+    <div class="ui container">
+        <div class="ui inverted secondary stackable menu">
+            <h2 class="ui blue inverted header item" style="font-family: STSong">YEBLOG</h2>
+            <!--<div class="right m-item item m-mobile-hide">-->
+            <a href="#" th:href="@{/}" class="active m-item item teal"><i class="home icon"></i>首页</a>
+            <a href="#" th:href="@{/types/-1}" class="m-item item"><i class="clone outline icon"></i>导航</a>
+            <a href="#" th:href="@{/archives}" class="m-item item"><i class="clock icon"></i>时间段</a>
+            <a href="#" th:href="@{/music}" class="m-item item"><i class="music icon"></i>音乐</a>
+            <a href="#" th:href="@{/message}" class="m-item item"><i class="book icon"></i>留言</a>
+            <a href="#" th:href="@{/friends}" class="m-item item"><i class="pencil alternate icon"></i>协同维护</a>
+            <a href="#" th:href="@{/picture}" class="olive m-item item"><i class="image icon"></i>照片</a>
+            <a href="#" th:href="@{/about}" class="m-item item"><i class="info icon"></i>关于我</a>
+            <!--</div>-->
+            <div class="right m-item item">
+                <form name="search" action="#" th:action="@{/search}" method="post" target="_blank">
+                    <div class="ui icon transparent input m-margin-tb-tiny m-opacity-small" style="color: white">
+                        <input style="color: white" type="text" name="query" placeholder="Search...." th:value="${query}">
+                        <i onclick="document.forms['search'].submit()" class="search link icon m-opacity-small"></i>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <a href="#" class="ui menu toggle black icon button m-right-top m-mobile-hide" style="display: none">
+        <i class="sidebar icon"></i>
+    </a>
+</nav>
+</body>
+</html>

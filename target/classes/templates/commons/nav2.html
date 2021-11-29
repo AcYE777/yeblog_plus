@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--使用第2套的原因就是<div class="right m-item item m-mobile-hide">和第一套有区别-->
+<nav class="gird-header m-opacity-small-nav" th:fragment="nav2-head">
+    <div class="ui container">
+        <div class="ui inverted secondary stackable menu">
+            <h2 class="ui blue inverted header item" style="font-family: STSong">YEBLOG</h2>
+            <!--<div class="right m-item item m-mobile-hide">-->
+            <a href="#" th:href="@{/}" class="m-item item m-mobile-hide teal" th:classappend="${n == 1} ? 'active' : ''"><i class="home icon"></i>首页</a>
+            <a href="#" th:href="@{/vipblog}" class="m-item item m-mobile-hide teal" th:classappend="${n == 10} ? 'active' : ''"><i class="lock icon"></i>付费博客</a>
+            <a href="#" th:href="@{/types/-1}" class="m-item item m-mobile-hide teal" th:classappend="${n == 2} ? 'active' : ''"><i class="clone outline icon"></i>导航</a>
+            <a href="#" th:href="@{/archives}" class="m-item item m-mobile-hide teal" th:classappend="${n == 3} ? 'active' : ''"><i class="clock icon"></i>时间段</a>
+            <a href="#" th:href="@{/music}" class="m-item item m-mobile-hide teal" th:classappend="${n == 5} ? 'active' : ''"><i class="music icon"></i>音乐</a>
+            <a href="#" th:href="@{/message}" class="m-item item m-mobile-hide teal" th:classappend="${n == 6} ? 'active' : ''"><i class="book icon"></i>留言</a>
+            <a href="#" th:href="@{/friends}" class="m-item item m-mobile-hide teal" th:classappend="${n == 7} ? 'active' : ''"><i class="pencil alternate icon"></i>协同维护</a>
+            <a href="#" th:href="@{/picture}" class="m-item item m-mobile-hide teal" th:classappend="${n == 8} ? 'active' : ''"><i class="image icon"></i>照片</a>
+            <a href="#" th:href="@{/about}" class="m-item item m-mobile-hide teal" th:classappend="${n == 9} ? 'active' : ''"><i class="info icon"></i>关于我</a>
+            <!--</div>-->
+            <div class="right m-item item m-mobile-hide">
+                <form name="search" action="#" th:action="@{/search}" method="post" target="_blank">
+                    <div class="ui icon transparent input m-margin-tb-tiny m-opacity-small" style="color: white">
+                        <input style="color: white" type="text" name="query" placeholder="Search...." th:value="${query}">
+                        <i onclick="document.forms['search'].submit()" class="search link icon m-opacity-small"></i>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <a href="#" class="ui menu toggle black icon button m-right-top m-mobile-show">
+        <i class="sidebar icon"></i>
+    </a>
+</nav>
+</body>
+</html>

@@ -129,5 +129,4 @@ public class LoginController {
         session.removeAttribute("user");
         return "redirect:/admin";
     }
-
 }

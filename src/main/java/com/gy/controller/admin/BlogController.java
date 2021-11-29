@@ -79,7 +79,7 @@ public class BlogController {
         return "redirect:/admin/blogs";
     }
 
-//     删除文章
+    //     删除文章
     @GetMapping("/blogs/{id}/delete")
     public String delete(@PathVariable Long id, RedirectAttributes attributes) {
         blogService.deleteBlog(id);
@@ -87,7 +87,7 @@ public class BlogController {
         return "redirect:/admin/blogs";
     }
 
-//    跳转编辑修改文章
+    //    跳转编辑修改文章
     @GetMapping("/blogs/{id}/input")
     public String editInput(@PathVariable Long id, Model model) {
         List<Type> allType = typeService.getAllType();
@@ -98,7 +98,7 @@ public class BlogController {
         return "admin/blogs-input";
     }
 
-//    编辑修改文章
+    //    编辑修改文章
     @PostMapping("/blogs/{id}")
     public String editPost(ShowBlog showBlog, RedirectAttributes attributes) {
         int count = blogService.updateBlog(showBlog);
@@ -110,7 +110,7 @@ public class BlogController {
         return "redirect:/admin/blogs";
     }
 
-//    搜索博客
+    //    搜索博客
     @RequestMapping(value = "/blogs/search",method = RequestMethod.POST)
     public String search(SearchBlog searchBlog, Model model,
                          @RequestParam(defaultValue = "1",value = "pageNum") Integer pageNum) {
@@ -127,7 +127,7 @@ public class BlogController {
             model.addAttribute("hasSearch",true);
         }
         //可以只对blogs.html页面中的blogList部分进行刷新,需要在blogs.html页面配置th:fragment
-//        return "admin/blogs::blogPart";
+    //        return "admin/blogs::blogPart";
         return "admin/blogs::blogPart";
     }
 }

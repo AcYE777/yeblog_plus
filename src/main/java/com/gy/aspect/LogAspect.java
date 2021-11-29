@@ -1,5 +1,6 @@
 package com.gy.aspect;
 
+import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.*;
 import org.slf4j.Logger;
@@ -18,10 +19,11 @@ import java.util.Arrays;
  */
 @Aspect
 @Component
+@Slf4j
 public class LogAspect {
     private final Logger logger = LoggerFactory.getLogger(this.getClass());
 
-//    拦截控制器
+    //    拦截控制器 execution(修饰符  返回值  包.类.方法名(参数) throws异常)
     @Pointcut("execution(* com.gy.controller.*.*(..))")
     public void log() {}
 
@@ -40,7 +42,7 @@ public class LogAspect {
 
     @After("log()")
     public void doAfter() {
-//        logger.info("--------doAfter--------");
+        log.info("doAfter");
     }
 
     @AfterReturning(returning = "result",pointcut = "log()")
